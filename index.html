@@ -1,0 +1,5263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<script>
+		function resizeIframe(obj) {
+			obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+		}
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>ICT Summit Namibia</title>
+	<!-- Favicon -->
+	<!-- <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>-->
+	<!-- Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Slick slider -->
+	<link href="assets/css/slick.css" rel="stylesheet">
+	<!-- Theme color -->
+	<link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+	<!-- Main Style -->
+	<link href="style.css" rel="stylesheet">
+
+	<!-- Fonts -->
+
+	<!-- Open Sans for body font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+	<!-- Montserrat for title -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<!--Start Pop up Script-->
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-family: Helvetica, Arial, sans-serif;
+		}
+
+		/* Full-width input fields */
+		input[type=text],
+		input[type=password] {
+			width: 90%;
+			padding: 12px 20px;
+			margin: 8px 26px;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+
+		/* Set a style for all buttons */
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 0px 0px;
+			margin: 8px 26px;
+			border: none;
+			cursor: pointer;
+			width: 90%;
+			font-size: 20px;
+			border-radius: 12px;
+		}
+
+		button:hover {
+			opacity: 0.8;
+		}
+
+		/* Center the image and position the close button */
+		.imgcontainer {
+			text-align: center;
+			margin: 24px 0 12px 0;
+			position: relative;
+		}
+
+		.avatar {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+		}
+
+		/* The Modal (background) */
+		.modal {
+
+			border: blue 1px solid;
+			margin-top: 6%;
+			margin-left: 19%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 70%;
+			height: 85%;
+			overflow: auto;
+			background-color: rgba(255, 255, 255, 0.952);
+		}
+
+		/* Modal Content Box */
+		.modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 10px;
+			width: 50%;
+			height: 100%;
+		}
+
+		/* The Close Button (x) */
+		.close {
+			position: absolute;
+			right: 20px;
+			top: 0;
+			color: #000;
+			font-size: 35px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: red;
+			cursor: pointer;
+		}
+
+		/* Add Zoom Animation */
+		.animate {
+			animation: zoom 0.6s
+		}
+
+		@keyframes zoom {
+			from {
+				transform: scale(0)
+			}
+
+			to {
+				transform: scale(1)
+			}
+		}
+
+		/* The Modal (background) */
+		.mtc-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.mtc-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.multichoice-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.multichoice-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.avm-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.avm-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.axiz-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.axiz-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.bcx-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.bcx-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.cran-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.cran-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.green-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.green-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.huawei-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.huawei-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.standard-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.standard-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.mtn-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.mtn-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.nbc-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.nbc-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.powercom-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.powercom-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.schoemans-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.shcoemans-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.telecom-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.telecom-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.syntex-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.syntex-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.bid-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.bid-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.fnb-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.fnb-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.forcepoint-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.forcepoint-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.headway-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.headway-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.nepc-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.nepc-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.oteku-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.oteku-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.paratus-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.paratus-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.proef-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.proef-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.shine-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.shine-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.lori-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.lori-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.jasco-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.jasco-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+			/* The Modal (background) */
+			.ictech-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+			margin-top: 27%;
+			margin-left: 27%;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 40%;
+			overflow: auto;
+			background-color: rgba(224, 219, 219, 0.952);
+		}
+
+		/* Modal Content Box */
+		.ictech-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+
+
+		/* The Modal (background) */
+		.pledge-modal {
+			border-radius: 15px;
+			border: blue 1px solid;
+
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: white;
+		}
+
+		/* Modal Content Box */
+		.pledge-modal-content {
+			background-color: #fefefe;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		td {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		.column {
+			float: left;
+			padding: 5px;
+		}
+
+		/* Clearfix (clear floats) */
+		.row::after {
+			content: "";
+			clear: both;
+			display: inline;
+		}
+
+		/* The Modal (background) */
+		.roger-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 30%;
+			width: 40%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.roger-modal-content {
+
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+
+		/* The Modal (background) */
+		.stanley-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 30%;
+			width: 40%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.stanley-modal-content {
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		/* The Modal (background) */
+		.engel-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 40%;
+			height: 30%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.engel-modal-content {
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		.ian-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 40%;
+			height: 30%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.ian-modal-content {
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		.pdp-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 40%;
+			height: 30%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.pdp-modal-content {
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		.pdp-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 40%;
+			height: 30%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.pdp-modal-content {
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		.kai-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 40%;
+			height: 30%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.kai-modal-content {
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		.heike-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 40%;
+			height: 30%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.heike-modal-content {
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		.dod-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 40%;
+			height: 30%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.dod-modal-content {
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		.rose-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 40%;
+			height: 30%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.rose-modal-content {
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+
+		.mbeuta-modal {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+			display: none;
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			color: #fff;
+			background-color: #555;
+			width: 40%;
+			height: 30%;
+			margin-top: 29%;
+			margin-left: 27%;
+		}
+
+		/* Modal Content Box */
+		.mbeuta-modal-content {
+			background-color: #555;
+			color: #fff;
+			margin: 4% auto 15% auto;
+			border: 1px solid rgb(41, 40, 40);
+			padding-top: 5px;
+			width: 50%;
+			height: 60%;
+		}
+	</style>
+	<!--End Pop up Script-->
+</head>
+
+<body>
+
+	<!--
+
+		Start Chat
+	-->
+
+	<!--Start of Tawk.to Script
+<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/5c3264f17a79fc1bddf37ffe/default';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	-End of Tawk.to Script-->
+
+	<!--End Chat-->
+
+	<!-- Start Pop Up -->
+
+	<!--<h1 style="text-align:center; font-size:50px; color:#fff">Modal Popup Box Login Form</h1>
+
+	  <button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;">
+	  Open Popup</button>
+	  -->
+	<div id="roger-modal-wrapper" class="roger-modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('roger-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<p style='text-align: left; margin-left: 1%;'>
+				<small> Managing Director: MultiChoice Namibia<br>
+					Years of experience: 25<br>
+					Institutions worked at: City of Windhoek, Nedbank, First National Bank<br>
+					Affiliations: Board Member<br>
+					Qualifications: Bachelor in Commerce & Masters of Business Leadership
+				</small>
+			</p>
+		</div>
+	</div>
+
+	<div id="heike-modal-wrapper" class="heike-modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('heike-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<p style='text-align: left; margin-left: 1%;'>
+				<small>
+					Heike Winschiers-Theophilus, is a Professor in Computer Science<br> in the Faculty of Computing and
+					Informatics at the Namibia University of Science and Technology, and a pioneer in co-designing
+					technologies with indigenous and marginalised communities. Since 1994 she has been living,
+					teaching and researching in Namibia. She graduated from the University of Hamburg in 2001
+					with a PhD and has been working at the Polytechnic of Namibia, now transformed to Namibia
+					University of Science and Technology (NUST) since.<br><br> In 2008 she established a niche area
+					research cluster on digitalising Indigenous Knowledge which has graduated numerous students,
+					received multiple funds and awards. Further concerned with socio-economic challenges in the
+					country, and the well-being of marginalised she has established a number of research-based
+					community outreach projects contributing to societal transformation. Promoting inclusive
+					innovation, she is leading a local Tech Innovation Hub engaging indigenous and marginalised
+					communities in the co-development of innovative tech products and processes for the mainstream
+					market.
+					In collaboration with learners from People’s Primary School and Yambeka Children Media,
+					she has co-designed and conceptualised a unique interactive tech library as well as numerous
+					edtech applications.
+
+
+				</small>
+			</p>
+		</div>
+	</div>
+
+	<div id="stanley-modal-wrapper" class="stanley-modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('stanley-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<p style='text-align: left; margin-left: 1%;'>
+				<small>
+					Honourable Stanley Simataa serves as the current<br> Minister of Information and Communication
+					Technology since 09 February 2018.
+					Hon. Simataa is the former Deputy Minister of the Ministry of Information and Communication
+					Technology since March 2010 till 09 February 2018.
+					<br>He has over 20 years working experience in the public service, having served in various
+					executive positions in the Ministry of Fisheries and Marine Resources; National Assembly; National
+					Council for Higher Education and the Ministry of Education, Sports and Culture.
+
+
+				</small>
+			</p>
+		</div>
+	</div>
+
+	<div id="rose-modal-wrapper" class="rose-modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('rose-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<p style='text-align: left; margin-left: 1%;'>
+				<small> Wireless Solutions Director<br>
+					Huawei Enterprise Solution Department, Southern Africa Region
+					<br>
+					Rose is the Wireless Solutions Director for the Huawei
+					Enterprise Business Group Southern Africa region. As a
+					professional engineer with a vast experience in telecommunications project management and ICT
+					regulation, her passion lies in the areas of solutions design and business development. She holds a
+					BEng, MEng (Telecommunications Major)
+					MBA degrees and is a member of IEEE and IoDSA.
+				</small>
+			</p>
+		</div>
+	</div>
+	<div id="engel-modal-wrapper" class="engel-modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('engel-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<p style='text-align: left; margin-left: 1%;'>
+				<small>
+					Honourable Engelbrecht Antiochus Nawatiseb serves<br> as the Deputy Minister of Information and
+					Communication Technology since 12 March 2018. Hon. Nawatiseb is the former Deputy Minister of Public
+					Enterprises since 20 March 2015 till 12 March 2018.
+					<br>
+					With vast working experience in the Public Service, He has served in various executive positions in
+					the Association of Local Authority in Namibia, Retirement Fund of Local Authority of Namibia,
+					Namibian Broadcasting Corporation and Tsumeb Municipality.
+
+
+
+				</small>
+			</p>
+		</div>
+	</div>
+
+	<div id="ian-modal-wrapper" class="ian-modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('ian-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<p style='text-align: left; margin-left: 1%;'>
+				<small>
+					A “engineer at core” business leader with a gamut of
+					technology management experience within start-up
+					to fortune-50 environments.<br>25 Years in Information Management & Office Automation industry with
+					technical & sales management experience, dealing with corporate accounts and new business.
+					<br><br>Pioneering digital transformation, providing product and sales training, customized
+					demonstrations for customers while evangelizing the MDS selling approach. The thorough process of
+					training sales consultants in preparation for the Solution Sales Cycle with the main purpose of
+					Increasing sales.
+
+
+
+				</small>
+			</p>
+		</div>
+	</div>
+
+	<div id="pdp-modal-wrapper" class="pdp-modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('pdp-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<p style='text-align: left; margin-left: 1%;'>
+				<small>
+					An energetic individual with a combination of talent, charm and experience,<br> Paul Munanjala time
+					and again proves to be the perfect host be it for a corporate event, musical celebration or private
+					occasion. Armed with all the know-how to smoothly run an event, I thrive in my role as Master of
+					Ceremonies.
+					<br><br>
+					Born on the 8th of December, 1991, I have always had a passion for entertaining an audience and
+					music. I have been active in the industry for over 5 years. Currently an honors degree holder in
+					Media Studies from the University of Namibia, I am also currently working with the Namibian
+					Broadcasting Corporation under the “Whatagwan” show which airs on NBC 1, Monday to Wednesday at 4PM.
+
+				</small>
+			</p>
+		</div>
+	</div>
+
+
+	<div id="kai-modal-wrapper" class="kai-modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('kai-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<p style='text-align: left; margin-left: 1%;'>
+				<small>
+					Name: Kai Walter Kleingünther<br>
+					Title: Marketing Strategist and Compliance Officer<br>
+					Company name: Business Intelligence Dynamics<br>
+					Background: Bcom Management, LLB,
+					UCT Compliance Certificate
+
+
+				</small>
+			</p>
+		</div>
+	</div>
+
+	<div id="dod-modal-wrapper" class="dod-modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('dod-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<p style='text-align: left; margin-left: 1%;'>
+				<small>
+					Dial a deadly is a business that MaryCent Kashuwa and Naledi Kunene<br> started in 2018.
+					We have a passion for entertaining people and we have always felt that making people happy
+					is a priority for us.<br><br> We are both 21 years old and we understand that there is a market for
+					Entertainers in our country and we capitalized on that and have built our brand for
+					the past 10 months and we have achieved alot of our goals and are ready to take over
+					the world and become big so that we can allow for other young people to learn under
+					us and become their own people and do things that are different but bring them joy.<br><br>
+					MaryCent Kashuwa is a student at the University of Namibia studying Politics and Naledi Kunene is
+					studying Media and Drama at the University of Namibia.
+
+				</small>
+			</p>
+		</div>
+	</div>
+
+
+	<div id="mbeuta-modal-wrapper" class="mbeuta-modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('mbeuta-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<p style='text-align: left; margin-left: 1%;'>
+				<small>
+					Mr. Mbeuta Ua-Ndjarakana is the current Executive Director and Accounting Officer of the Ministry of
+					Information and Communication Technology. He started in the same portfolio in 2007 when the Ministry
+					was still known as the Ministry of Information and Broadcasting.
+					<br><br>Mr. Ua-Ndjarakana serves on the Namibia Qualifications Authority Council, as well as the
+					Financial Inclusion Advisory Body of the Bank of Namibia.
+				</small>
+			</p>
+		</div>
+	</div>
+
+	<div id="pledge-modal-wrapper" class="pledge-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('pledge-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<img src="assets/images/logo.png">
+		<!--	<h1 style="text-align:center">Sponsorship Pledge form</h1>-->
+		</div>
+
+	</div>
+
+	<div id="modal-wrapper" class="modal">
+
+		<!---------	<form id="Registrations" class="modal-content animate">--->
+
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+			<!------	<img src="assets/images/logo.png" >
+			<h1 style="text-align:center">Register Now!</h1>---->
+		</div>
+
+		<!------     	<input type="text" class="form-control"   placeholder="Name" id="name" name="name" required="true">									
+          	<input type="text" class="form-control"  placeholder="Phone Number" id="phone" name="phone" required="true">				
+		<input type="text" class="form-control"   placeholder="Email" id="email" name="email" required="true">									
+		<select class="form-control" name="field" id="field" required="true" style="width: 91%;margin-left: 24px; ">
+			<option value="field">Register As:</option>
+			<option value="Student">Committee</option>
+			<option value="Delegate">Delegate	</option>
+			<option value="Exhibitor">Exhibitor</option>
+			<option value="Exhibitor">Sponsor</option>
+				
+
+		</select>  
+		<button class="mu-reg-submit-btn" type="submit" id="register"><span>Register</span></button>		
+		</form>
+		<iframe src="https://services.cognitoforms.com/f/Q-KsOXK46U-CkmVHjHU8TQ?id=1" frameborder="0" scrolling="yes" seamless="seamless" height="650" width="100%"></iframe>
+        <script src="https://services.cognitoforms.com/scripts/embed.js"></script>--->
+	</div>
+
+	<div id="mtc-modal-wrapper" class="mtc-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('mtc-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue; color: #fefefe;"><b>MTC Namibia </b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Mobile Telecommunications Limited is a mobile telecommunications company in Namibia providing
+			cellular access. It is the largest mobile operator in Namibia with over two million
+			active subscribers. MTC was established in 1994 and was the only cellular provider in
+			Namibia at that time.
+		</p>
+
+	</div>
+
+	<div id="ictech-modal-wrapper" class="ictech-modal">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('ictech-modal-wrapper').style.display='none'" class="close"
+					title="Close PopUp">&times;</span>
+			</div>
+			<div class="mu-title-area">
+				<h1 class="mu-title" style="background-color: blue; color: #fefefe;"><b>ICTech Hub </b> </h1>
+			</div>
+			<br>
+			<br>
+			<br>
+			<p style="color: rgb(12, 12, 12); margin-left: 2%">
+					Inclusive and Collaborative Local Tech Innovation Hub is a project by the Faculty of Computing and Informatics at the
+					Namibia University of Science and technology (NUST).
+					
+					The Hub has been fully funded from November 2017 to October 2019 by the Finnish Embassy in Namibia.
+					
+					Our goal is to become a self-sustaining entity, which will keep on providing inclusive innovation services in Namibia
+					and beyond. To achieve this goal, we work together with partners – private sector companies, parastatals, government
+					entities, NGOs, communities and innovators – who share our vision of a prosperous and inclusive Namibia.
+					<br><br>
+					Unlike many other innovation Hubs in the world, we are not a physical working space but a network, which brings together
+					people, organisations and resources. Our work includes and empowers those who are usually excluded when new solutions
+					are developed.
+					
+					We are specialised in developing IT innovations, but our approach is people-centric. We understand that technologies in
+					themselves do not solve problems. That is done with people, with help from technologies.	</p>
+	
+		</div>
+
+
+	<div id="jasco-modal-wrapper" class="jasco-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('jasco-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue; color: #fefefe;"><b>Jasco Group</b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			The Jasco Group is a JSE listed company that delivers end-to-end best-of-breed solutions across the entire
+			ICT value chain. We provide a range of converged ICT offerings for telecoms operators and enterprises
+			businesses across the, communications, IT infrastructure, and electronic security and fire sectors.
+			<br><br>
+			Jasco is a product neutral, cross-industry systems integrator delivering smart technology solutions through
+			the disciplines of the telecommunications, information technology and energy industries. Our offering also
+			incorporates intelligent technologies including power and renewable energy, water & asset management, data
+			centers and broadcasting. The company not only delivers across the value chain, but in many cases owns the
+			value chain: from in-house design engineering, business consulting, project management, professional
+			services, support and maintenance, manufacturing and infrastructure right through to voice, video, data and
+			IP services.
+			<br><br>
+			Our Corporate Social Investment (CSI) initiatives are focused on education, a critical element of building
+			and maintaining a thriving, sustainable South African economy. As an ICT solutions provider we place
+			emphasis on technology and skills development as well as learning through technology
+		</p>
+
+	</div>
+
+	<div id="lori-modal-wrapper" class="lori-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('lori-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Lori Ink & Accessories </b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Lori Ink offers Re-manufactured,Compatible and ORIGINAL laser and Inkjet cartridges for all
+			the major OEM's i.e. Brother, Canon, HP and others.
+			Lori Ink Cc is the Only Authorized NAMIBIAN reseller for Static Control,
+			the world's leading manufacturer for replacement cartridges and imaging systems. Static Control
+			cartridges are manufactured in ISO 9001:2015 and ISO 14001:2015 certified facilities,
+			using the strictest quality control standards - such as Reach, RoHS, WEEE And STMC.
+		</p>
+
+	</div>
+
+	<div id="multichoice-modal-wrapper" class="multichoice-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('multichoice-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>MultiChoice </b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			<strong>About MultiChoice Namibia</strong><br>
+			Since way back in 1992 MultiChoice Namibia has been a much-loved part of society,
+			a video entertainment company that brings the family together to share precious moments
+			and unforgettable memories. In a vast land of scattered, far-flung communities,
+			we’re delivering on the MultiChoice purpose of using the power of entertainment to enrich lives.
+			The recent launch of GOtv was the biggest rollout of the latest digital terrestrial
+			television (DTT) standard in the world and the first in Africa.<br><br>
+
+			MultiChoice Namibia has a direct economic impact of some $11.9 million (USD) per annum.
+			Every day more than 150 dedicated MultiChoice employees go to work in Windhoek, Ongwediva
+			and Swakopmund with one objective in mind; to enrich the lives of our customers, and future
+			subscribers by finding ways to exceed their expectations, hopes and dreams.<br>
+
+			The MultiChoice Namibia team works with 13 agents, 300 retailers and 80 accredited installers to
+			deliver on the promise of our brands namely DStv & GOtv. We recently implemented a
+			customer-relationship system which worked so well it has now been replicated across all
+			MultiChoice Africa operations.<br><br>
+			<strong>How we create social value</strong><br>
+			The launch of GOtv in Namibia represented the biggest rollout of digital terrestrial television
+			(DTT) standard in the world and the first in Africa. Since 2012 our DTT infrastructure has
+			expanded to 6 transmission stations spanning, first, from Windhoek to Walvis Bay & Swakopmund,
+			Oshakati and, eventually, as far as Rundu.<br><br>
+
+			<strong>Growing Namibia’s creative industries</strong><br>
+			In May this year we announced the bold new Pan-African social investment initiative - the
+			MultiChoice Talent Factory (MTF) - aimed at igniting and growing Africa’s creative industries
+			into vibrant, economic centres. The launch of MTF forms part of our new strategy of furthering
+			this investment through creating shared value by using our core business resources, people,
+			skills and networks to affect a positive change in society that yields benefits for the business
+			and society. The MTF Academy students will receive skillsets to develop their talent,
+			connect with industry professionals and tell authentic African stories through a
+			comprehensive curriculum comprising theoretical knowledge and hands-on experience in
+			cinematography, editing, audio production and storytelling. The programme will take place
+			at three regional MTF Academies based in Zambia for Southern African, Kenya for East Africa,
+			Nigeria for West Africa and will be overseen by acclaimed local film & TV industry experts.
+			Esther Tasha Utjiwa Beukes, Toivo Nghidipohamba Ashivudhi and Sally Ndapandula Jason from
+			Namibia will represent Namibia at the Zambia-based MTF Academy from 1 October.<br><br>
+
+			<strong>Enriching lives</strong><br>
+			As a video entertainment company, our role is to enrich lives and our mission is to deliver
+			value to our customers by making great entertainment more accessible to Namibians.
+			We find and develop the right mix of content and deliver it – anytime and anywhere.
+			Whether it is local telenovelas, the excitement of national sports or the latest global
+			blockbusters, our investment in leading-edge content and technology brings the shows that
+			people love into their hands and their living rooms.
+
+		</p>
+
+	</div>
+
+	<div id="avm-modal-wrapper" class="avm-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('avm-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>AVM </b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			AVM offers an extensive selection of products for high-speed broadband connectivity and smart home
+			networking. With the FRITZ! product range, AVM is a leading manufacturer of broadband devices for DSL,
+			cable, LTE (4G) and fiber optics in Germany and Europe. Our Smart Home products, based on wireless LAN, DECT
+			and powerline standards, ensure an intelligent and secure home network. Thanks to the FRITZ!OS operating
+			system, FRITZ! products are intuitive and easy to use. Regular free updates provide new functions for
+			greater convenience and increased security. FRITZ! is the leading brand for home networking in Germany.
+			Since it started out in Berlin in 1986, AVM's focus has been on developing secure, innovative products for
+			broadband connections in-house.
+
+		</p>
+
+
+	</div>
+
+	<div id="axiz-modal-wrapper" class="axiz-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('axiz-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Axiz – Enterprise Technology
+					Solutions </b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Our commitment to our stakeholders is to be the best and most successful distributor in our region. We
+			strive towards this goal by being the most valued channel for our partners and by contributing to the growth
+			and profitability of our shareholders, staff, vendors, channel partners and their customers. Our mission is
+			to create value through excellent service, incremental efficiency realisation, demand generation, relevant
+			skills, and access to markets. We provide offerings to our resellers which include our vendor relationships,
+			relevant skills, access to credit, training and business development.
+
+		</p>
+
+	</div>
+
+	<div id="bcx-modal-wrapper" class="bcx-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('bcx-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Business Connexion </b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			<strong>Your world, Our solutions</strong><br>
+			<br><strong>Services:</strong><br>
+			Cloud Computing<br>
+			Big Data Analytics<br>
+			Digital HR<br>
+			Converged Connectivity<br>
+			Internet of Things(M2M)<br>
+		</p>
+
+	</div>
+
+	<div id="cran-modal-wrapper" class="cran-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('cran-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Communications Regulatory Authority
+					of Namibia(CRAN) </b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			The Communications Regulatory Authority of Namibia, established by the Namibian Communication Act on 18 May
+			2011 with the mandate to regulate postal and telecommunication services. It merged the former Namibia
+			Communications Commission.
+
+		</p>
+
+
+	</div>
+
+	<div id="green-modal-wrapper" class="green-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('green-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Green Enterprise Solutions </b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			We are a truly Namibian company, providing information and communication technology (ICT) services to
+			corporate Namibia. Our long-term objective is to sustain a Namibian business which makes positive
+			contributions to all our stakeholders. Our vision is guided by Namibia’s national development plans, namely
+			Vision 2030, the National Development Plan (NDP) 5 and the Harambee Prosperity Plan (HPP) of the Republic of
+			Namibia.
+
+		</p>
+
+
+	</div>
+
+	<div id="huawei-modal-wrapper" class="huawei-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('huawei-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Huawei </b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Huawei is a leading global information and communications technology “ICT” solutions provider. Through its
+			dedication to customer-centric innovation and strong partnerships, it has established end-to-end solution
+			advantages in telecom networks, devices, and cloud computing.<br>
+			Huawei is a world leading ICT solution provider and ranked no. 1 in the world Telecommunications industry
+			since 2012; and is ranking No.83 among the global fortune 500 companies and operates in 170 countries
+			worldwide. Our solutions and products are serving 1/3rd of the world population. In terms of the revenue,
+			<br>In Namibia, Huawei is focused on building long-term partnerships with telecommunications operators in
+			Namibia, and the Government of the Republic of Namibia, and thus would like to play a leading role in
+			telecom operator’s strategic lead in the telecoms and ICT sector in Namibia and the continent.
+			Huawei is committed to creating maximum value for telecom operators, enterprises and consumers by providing
+			competitive solutions, services and products.
+			Huawei’s vision is to build a better connected world.<br> Through open partnerships, Huawei focuses on
+			providing future-oriented information pipes, consistent cloud services.
+
+		</p>
+
+	</div>
+
+	<div id="standard-modal-wrapper" class="standard-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('standard-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Standard Bank</b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Standard Bank is one of Namibia’s oldest companies. The banks original vision was to understand its
+			customers better, have people with strong knowledge of local business conditions and to do a better job of
+			connecting borrowers with lenders. This vision created the platform for the kind of bank it would become and
+			qualities on which its customers and clients would come to rely.
+
+		</p>
+
+	</div>
+
+	<div id="mtn-modal-wrapper" class="mtn-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('mtn-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>MTN Group</b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			MTN Group is a leading emerging markets mobile operator which is at the forefront of the technological
+			changes sweeping the world. We invest significantly in advanced communications networks, connecting more
+			than 203,8 million people in 22 countries across Africa and the Middle East. In the past five years alone,
+			our capital expenditure has exceeded R130 billion in the countries where we operate. In pursuit of our
+			vision to lead the delivery of a bold, new Digital World to our customers, and our mission to make our
+			customers' lives a whole lot brighter, we leverage the talent of our 25 424 employees to offer innovative
+			products and a quality customer experience. We recognize the value of diversity within a group with a solid
+			organizational culture. Working with integrity, we value our relationships with the communities in which we
+			work, our customers and employees, our shareholders and the media, governments and regulators, as well as
+			suppliers and business and industry partners. We recognize the importance of these stakeholders, among
+			others, in the sustainability of our business.
+
+		</p>
+
+	</div>
+
+	<div id="nbc-modal-wrapper" class="nbc-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('nbc-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Namibian Broadcasting Coporation</b>
+			</h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			The Namibian Broadcasting Corporation is the public broadcaster of Namibia. It was established in 1979,
+			under the name South West African Broadcasting Corporation.
+
+		</p>
+
+
+	</div>
+
+	<div id="powercom-modal-wrapper" class="powercom-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('powercom-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>PowerCom</b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			PowerCom has been in operation since 2007 and became a subsidiary of Telecom Namibia Group in October 2013.
+			Since its acquisition, the principle nature of business changed from a mobile telecommunications operator to
+			an ICT infrastructure and equipment provider.
+
+		</p>
+	</div>
+
+	<div id="schoemans-modal-wrapper" class="schoemans-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('schoemans-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Schoemans Technologies</b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			<strong>General Company Background</strong><br>
+			The Schoemans Group is the leading Namibian Office Equipment
+			and ICT Group, with all its assets and owners in Namibia,
+			and a 59-year history of commitment and support to
+			Namibian Government and Business. Theo Schoeman is
+			the CEO supported by Henk Schoeman the Managing Director.
+			The Head Office is in Windhoek with Branches in
+			Walvis Bay, Rundu and Oshakati, supporting the
+			complete territory, and a mobile technical facility
+			regularly visits all other centers.<br><br>
+			<strong>Services.</strong><br>
+			Meeting the ever-changing environment of the ICT sector requires constant innovation and dedication from
+			service providers. Schoemans is structured in such a way that this main objective is achieved. Our ranges of
+			services include: sales, consultancy and technical support via SLA’s or time and materials. Our staff is at
+			your service for any further information you may require.
+
+
+
+		</p>
+
+	</div>
+
+	<div id="telecom-modal-wrapper" class="telecom-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('telecom-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Telecom Namibia</b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+
+			Telecom Namibia Ltd is a telecommunications service provider operating in Namibia. It is the national
+			telecommunications operator, established in August 1992 and wholly owned by the Government of the Republic
+			of Namibia.
+
+		</p>
+
+	</div>
+
+	<div id="syntex-modal-wrapper" class="syntex-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('syntex-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Syntex Technologies</b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Syntex Technologies (Pty) Ltd is a Namibian ICT company that excels at solving complex business and systems
+			problems using proven process and latest technologies.
+
+			We consistently demonstrates our ability to identify and deliver on the promise of the best technological
+			solution based on best practices and international standards.
+
+			Syntex Technologies offers complete end-to-end services and solutions to its clients.
+
+			Our project management processes include change management, business process re-engineering and knowledge
+			transfer.
+
+		</p>
+
+	</div>
+
+	<div id="bid-modal-wrapper" class="bid-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('bid-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Business Intelligence Dynamics</b>
+			</h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			BI-Dynamics is a technology company that specializes in the provision of professional ICT Consultancy and
+			technical Services.
+		</p> <br>
+		<p>We are specialists in everything tech including:</p>
+		<p>Software and App Development </p>
+		<p>Data Warehousing and Data Mining</p>
+		<p>Business Intelligence Services, Business Process, Development & Mapping</p>
+		<p>Multimedia, Graphic Design & Marketing Management</p>
+
+
+	</div>
+
+	<div id="fnb-modal-wrapper" class="fnb-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('fnb-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>FNB Namibia</b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			FNB Namibia Ltd. provides a full range of banking services to individuals, while FNB Business and RMB
+			Namibia offer services and solutions that meet the needs of enterprises - both large and small - throughout
+			the country. Our extensive countrywide branch and automated teller machine (ATM) networks, as well as
+			self-service channels such as FNB Namibia Online Banking, Cellphone Banking & FNB App sites ensure that you
+			have access to your accounts around the clock.
+			<br>
+			Investing in the community and future of our country is a priority. The FirstRand Namibia Foundation Trust
+			is the vehicle through which we support non-profit organisations and institutions working towards the
+			development and empowerment of the broader community.
+		</p>
+
+	</div>
+
+
+	<div id="forcepoint-modal-wrapper" class="forcepoint-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('forcepoint-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Forcepoint</b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Purpose-built and ready to protect, Forcepoint is driven by an understanding of human behavior and
+			intent. Our innovative technology, decades of experience and clear vision help solve critical
+			security issues to protect employees, business data and IP.
+			We offer a systems-oriented approach to insider threat detection and analytics, cloud-based user
+			and application protection, next-gen network protection, data security and systems visibility. It’s
+			a new approach to cybersecurity never seen before.<br> And as technology and users’ needs evolve, we
+			are constantly looking to expand our offerings while staying true to our core in protecting the
+			human point.Through our 20 years of frontline experience, proactive and context-based
+			technologies, and data-centric, integrated solutions, Forcepoint enables better
+			decision-making and more efficient security at the human point for more than
+			20,000 government organizations and enterprises world-wide.
+		</p>
+
+	</div>
+
+	<div id="headway-modal-wrapper" class="headway-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('headway-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Headway Consulting</b> </h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Headway was founded in 2011 as a proudly Namibian company providing ICT consultancy services to
+			corporate Namibia. The business is owned and managed by previously disadvantaged Namibians.
+			We offer a variety of services to our customers including Consulting and Training.
+			In addition, with a core staff of experienced professionals and a team approach to our consulting
+			projects, Headway is able to offer product agnostic and objective consulting service with focused
+			on elevating ICT to the level of a strategic enabler within organisations.
+			Through this, we have developed an extensive track record in Namibia servicing both the public
+			and private sectors, ranging from the biggest to the smaller organisations.
+		</p>
+
+	</div>
+
+	<div id="nepc-modal-wrapper" class="nepc-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('nepc-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>New Era Publication Corporation</b>
+			</h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			As one of the leading national news and information institutions, New Era Publication Corporation,
+			a wholly-owned publishing corporation of the Government of the Republic of Namibia, is committed to
+			providing an objective and factual information service to various readership groups, within its
+			authorising environment. The Corporation, established in terms of the New Era Publication
+			Corporation Act, No1 of 1992, publishes newspapers as well as providing content online and
+			on various mobile platforms. New Era is the flagship English daily national newspaper,
+			and Kundana, a weekly national national newspaper published in the indigenous language of Oshiwambo.
+		</p>
+
+	</div>
+
+	<div id="paratus-modal-wrapper" class="paratus-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('paratus-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Paratus Group Holdings ltd</b></h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Paratus is a grass-roots Namibian founded company and has grown into a multinational organisation with a
+			prolific network across Africa.
+			<br>
+			It has operational offices in Angola, Botswana, Mozambique, Namibia, South Africa and Zambia and further
+			provides connectivity services to 24 African countries through an extensive partner network.
+			<br>
+			Paratus always has and will now, more than ever, continue its relentless drive towards challenging the
+			status quo. Paratus has geared itself to deliver world-class technology through empowered and committed
+			employees, charged with vigour to ensure that each customer experience speaks of business value.
+			<br><br>
+
+			Paratus delivers a wide bouquet of connectivity and ICT services across various industry segments in each
+			country in which it operates ranging from consumer, SME, retail, enterprise, mining, agriculture and
+			government sectors with products and services complementing these specialised industries.
+
+		</p>
+
+	</div>
+
+	<div id="proef-modal-wrapper" class="proef-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('proef-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Proef Namibia </b></h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Proef is currently headquartered in Windhoek, offering to the market solutions in the areas of
+			Telecommunications, Energy and IT, specifically customized to this market.
+			At Proef, we know that we’re living in an increasingly complex and dynamic world. The ability to
+			adapt constantly has become a key competence for us to deliver services suitable to the needs
+			of the future.<br>In this process of transformation and progress, we are the trusted partner of our clients,
+			we present
+			innovative and tailored solutions to the challenges we face in the main sectors of activity - Telecom,
+			Power, Cities & Territories and Corporate.
+
+		</p>
+
+	</div>
+
+	<div id="shine-modal-wrapper" class="shine-modal">
+		<div class="imgcontainer">
+			<span onclick="document.getElementById('shine-modal-wrapper').style.display='none'" class="close"
+				title="Close PopUp">&times;</span>
+		</div>
+		<div class="mu-title-area">
+			<h1 class="mu-title" style="background-color: blue;color: #fefefe;"><b>Shine Technologies </b></h1>
+		</div>
+		<br>
+		<br>
+		<br>
+		<p style="color: rgb(12, 12, 12); margin-left: 2%">
+			Shine Technologies Solutions (PTY)Ltd is a Namibian Information, Communication and Technology (ICT) Company.
+			The firm was established in 2011 and was founded in response to the nation’s need for better monitoring
+			services and increased innovation in the local ICT sector.
+			STS is championed by a team of proudly Namibian citizens who are committed to providing state-of-the-art
+			technologies and management systems to their clients and stakeholders
+			<br><br>
+			With the establishment of Vision 2030, and the more recent launch of the “E-Gov” strategic plan, the STS
+			team recognizes its responsibility in contributing to Namibia’s development and growth.
+			<br><strong>Objectives</strong><br>
+			To provide superior Security, Monitoring and ICT business solutions to the Namibian, African and Global
+			Market <br>
+			To provide state-of-the-art technology and solutions to our customers and stakeholders<br>
+			To be on the forefront of efficient and effective service delivery by streamlining operations<br>
+			To constantly seek opportunities for growth and expansion<br>
+			To facilitate mentorship and job creation in Namibia<br>
+			To facilitate appropriate ICT development in rural areas in particular<br>
+			To encourage the youth in particular to contribute to the sustainable development of the country though ICT
+		</p>
+
+
+
+	</div>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('lori-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == lori - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('mtc-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == mtc - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('multichoice-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == multichoice - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('avm-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == avm - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('axiz-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == axiz - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('bcx-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == bcx - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('cran-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == cran - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('green-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == green - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('huawei-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == huawei - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('standard-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == standard - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('mtn-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == mtn - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('nbc-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == nbc - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('powercom-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == powercom - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('schoemans-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == schoemans - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('telecom-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == telecom - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('syntex-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == syntex - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('bid-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == bid - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('fnb-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == fnb - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('forcepoint-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == forcepoint - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('headway-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == headway - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('nepc-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == nepc - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('paratus-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == paratus - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('proefmodal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == proef - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('shine-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == shine - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('pledge-modal-wrapper');
+		window.onclick = function (event) {
+			if (event.target == pledge - modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<!-- End Pop Up-->
+	<!-- Start Header -->
+	<header id="mu-hero" class="" role="banner">
+		<!-- Start menu  -->
+		<nav class="navbar navbar-fixed-top navbar-default mu-navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<!-- Logo -->
+					<img src="assets/images/logo.jpg" alt="logo img" href="index.html">
+					<!--  <a class="navbar-brand" href="index.html">ICT Summit Namibia</a>-->
+
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav mu-menu navbar-right">
+						<li><a href="#mu-hero">Home</a></li>
+						<li><a href="#mu-about">About</a></li>
+						<li><a href="#mu-sponsors">Sponsors</a></li>
+						<li><a href="#mu-schedule">Schedule</a></li>
+						<li><a href="#mu-speakers">Presenters</a></li>
+						<li><a href="#mu-video">Live ((o))</a></li>
+						<li><a href="#mu-register">Gallery</a></li>
+						<li><a href="#mu-exhibitors">Exhibitors</a></li>
+						<li><a href="#mu-contact">Contact</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<!-- End menu -->
+		<div class="mu-logo-area">
+			<!-- text based logo -->
+			<!--<a class="mu-logo" href="#">Entrepreneur Africa</a>-->
+			<!-- image based logo -->
+			<div class="mu-logo">
+				<a href="#"><img src="assets/images/court-of-arms.png" alt="logo img"
+						style="border-right: solid 1px #000"></a>
+
+				<a href="#"><img src="assets/images/logo.png" alt="logo img"></a>
+				<h6>Ministry of Information and Communication Technology</h6>
+			</div>
+		</div>
+		<img src="assets/images/ict-background.jpg" alt="logo img">
+		<div class="mu-hero-overlay">
+			<div class="container">
+				<div class="mu-hero-area">
+
+					<!-- Start hero featured area -->
+					<div class="mu-hero-featured-area">
+						<!-- Start center Logo -->
+
+						<!-- End center Logo -->
+
+						<div class="mu-hero-featured-content">
+							<!--<img src="assets/images/ict-background.jpg" alt="logo img"><br><br><br><br>
+								<h1> NATIONAL ICT<br> SUMMIT</h1>
+							<h2>5TH NATIONAL ICT SUMMIT, 2018</h2>
+							<h3 style="color: #fefefe;"><b>Theme : Re-thinking cybersecurity investment to secure the digital economy and its opportunities </b></h3>
+							<h3 style="color: #fefefe;"><b>Venue : TBA </b></h3>
+							<h1 class="mu-event-date-line">09 - 11 October <b>2023</b></h1>-->
+						<!--	<p><a href="assets/docs/ICTSummitInvitation.pdf" download><button style="width:250px">
+										<i class="fa fa-download"></i> Download Invitation</button> </a></p>
+							<p><a href="assets/docs/FINALPROGRAMME.pdf" download><button style="width:250px">
+										<i class="fa fa-download"></i> Download Programme</button> </a></p>
+										<p><a href="assets/docs/ICTSUMMITBOOKLET2019.pdf" download><button style="width:250px">
+											<i class="fa fa-download"></i> ICT Summit Booklet</button> </a></p>
+-->							<d-- class="mu-event-counter-area">
+								<div id="mu-event-counter">
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- End hero featured area -->
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!-- Start main content
+	<main role="main">-->
+	<!-- Start About -->
+	<section id="mu-about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mu-about-area">
+						<!--	 Start Feature Content -->
+
+
+						<div class="row">
+
+							<div class="col-md-6">
+								<div class="mu-about-right">
+
+									<h2> THE NATIONAL ICT SUMMIT IN BRIEF</h2>
+									<p> Hundreds of Information and Communication Technology, (ICT) experts and
+										institutions will converge in Windhoek for the 7th National ICT Summit scheduled
+										to take place from the 9th – 11th October 2023. The Summit will be held under the
+										brand <strong>“Accelerating Digital Transformation”</strong>.</p>
+
+
+									<p> The Summit creates a platform for the ICT industry to discuss trends and
+										challenges facing the industry globally and in the country. ICT industry players
+										use this platform to showcase their ICT solutions and services.The Summit also
+										exposes the youth to latest ICT trends and affords them the opportunity to also
+										present their latest innovations and inventions.</p>
+
+									<p> This Summit will define the roadmap for development and effective integration of
+										technology, as well as the agenda for growing ICT for an inclusive society.It
+										will position ICT as a vital tool in achieving Government’s main national
+										priorities of economic growth and development towards the goals of poverty
+										eradication and shared prosperity for all Namibians.</p>
+
+								</div>
+							</div>
+
+
+							<!--	<div class="col-md-4">
+									<div class="mu-about-left">
+										<img class="" src="assets/images/about.jpg" alt="Men Speaker">
+
+									<video width="650" height="450" autoplay loop>
+										<source src="assets/videos/ictsummit.mp4" type="video/mp4">
+								  </video>
+									</div>
+								</div>-->
+							<div class="col-md-6">
+								<div class="mu-about-right">
+									<h2>MANDATE</h2>
+									<p>
+										To create a platform for the Information and Communication Technology ( ICT)
+										industry to discuss the trends and challenges facing the industry globally and
+										in the country.
+										<br>
+										<p> To encourage ICT industry players to showcase their ICT solutions as well as
+											to expose the youth to latest ICT trends.
+										</p>
+
+										<h2>
+											Our Vision
+										</h2>
+										<p>
+											To be the ICT Summit for all Namibians joining hands and live up to the
+											image of ICT for all Namibians. </p>
+
+										<h2>
+											Our Mission
+										</h2>
+										<p>
+											To be the main catalyst in empowering Namibians to be ICT professionals to
+											be able to unlock the full potential of technology and human capital and
+											deliver value to the citizens, visitors and investors, so that Namibia
+											becomes a leader in ICT development in Africa.
+										</p>
+								</div>
+							</div>
+								<div class="mu-title-area">
+								 <h3>Evaluation Questionnaire</h3>
+								 <p>We are delighted that you were able to attend the 6th National ICT Summit and your inputs are 
+									 incredibly valuable and will enable us to improve our general organization, proceedings and 
+									 future themes (topics). Kindly complete this questionnaire and importantly, you are required 
+									 to provide your details on the questionnaire.
+
+							 </p>
+								 <iframe src="https://services.cognitoforms.com/f/Q-KsOXK46U-CkmVHjHU8TQ?id=2" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="651" width="100%"></iframe>
+								 <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+							</div>
+
+						</div>
+						<!-- End Feature Content -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--	<iframe src="assets/firebaseRegistration/index.html" frameborder='0' width='100%' height='800' allowtransparency='true' ></iframe>
+		 End About -->
+
+	
+
+	<!-- Start Sponsors -->
+	<section id="mu-sponsors">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mu-sponsors-area">
+						<div class="mu-title-area">
+							<h2 class="mu-title">Our 2023 Sponsors</h2>
+							<p>The ICT Summit greatly appreciates the contributions made by its sponsors who have chosen
+								to take ownership and responsibility for growing the ICT industry.</p>
+						</div>
+						<div class="mu-speakers-content"></div>
+						<div class="mu-title-area">
+							<h2 class="mu-title">Our 2019 Sponsors</h2>
+							<p>The ICT Summit greatly appreciates the contributions made by its sponsors who have chosen
+								to take ownership and responsibility for growing the ICT industry.</p>
+						</div>
+						<!--		 Start Speakers Content -->
+						<div class="mu-speakers-content">
+
+							<div class="mu-speakers-slider-2">
+
+								<!--		Start single speaker--->
+								<div class="mu-single-speakers">
+									<!----------<img src="assets/images/platinum.png" alt="speaker img">--->
+									<div class="mu-single-speakers-info">
+										<ul class="mu-single-speakers-social">
+											<li><a class="mu-modal-btn"
+													style="background-color:  #797979;margin-top: 80px;"><span>Platinum
+														Sponsors</span> </a></li>
+										</ul>
+									</div>
+								</div>
+								<!-------	End single speaker -->
+
+								<!--		Start single speaker--->
+								<div class="mu-single-speakers">
+									<img src="assets/images/mtc.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li> <a class="mu-modal-btn" style="background-color:  #797979;"
+													onclick="document.getElementById('mtc-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!-------	End single speaker -->
+
+								<!-- Start single speaker ----->
+								<div class="mu-single-speakers">
+									<img src="assets/images/huawei.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-modal-btn" style="background-color:  #797979;"
+													style="background-color:  #797979;"
+													onclick="document.getElementById('huawei-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!------	 End single speaker -->
+
+								<!-- Start single speaker --->
+								<div class="mu-single-speakers">
+									<img src="assets/images/mtn.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li> <a class="mu-modal-btn" style="background-color:  #797979;"
+													onclick="document.getElementById('mtn-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!-----	 End single speaker -->
+
+
+								<!-- Start single speaker--->
+								<div class="mu-single-speakers">
+									<img src="assets/images/nbc.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-modal-btn" style="background-color:  #797979;"
+													onclick="document.getElementById('nbc-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+										</ul>
+									</div>
+								</div>
+								<!-----	 End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/schoemans.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-modal-btn" style="background-color:  #797979;"
+													onclick="document.getElementById('schoemans-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/tn-sponsor.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-modal-btn" style="background-color:  #797979;"
+													onclick="document.getElementById('telecom-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!------	 End single speaker -->
+
+								<!-- Start single speaker 
+						<div class="mu-single-speakers">
+							<img src="assets/images/syntex.png" alt="speaker img">
+							<div class="mu-single-speakers-info">
+								
+								<ul class="mu-single-speakers-social">
+								<li>	<a class="mu-send-msg-btn" onclick="document.getElementById('syntex-modal-wrapper').style.display='block'" ><small>Click to View Profile</small> </a></li>
+													 
+									 
+								</ul>
+							</div>
+						</div>
+					<!	 End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/BID.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-modal-btn" style="background-color:  #797979;"
+													onclick="document.getElementById('bid-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+								<!-- Start single speaker-->
+								<div class="mu-single-speakers">
+									<img src="assets/images/nepc.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-modal-btn" style="background-color:  #797979;"
+													onclick="document.getElementById('nepc-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!-----	 End single speaker -->
+
+								<!-- Start single speaker-->
+								<div class="mu-single-speakers">
+									<!------ <img src="assets/images/gold.png" alt="speaker img">--->
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li><a class="mu-modal-btn"
+													style="background-color:  #DAA520; margin-top: 80px;"><span>Gold
+														Sponsors</span> </a></li>
+
+										</ul>
+									</div>
+								</div>
+								<!-----	 End single speaker -->
+
+								<!-- Start single speaker ---->
+								<div class="mu-single-speakers">
+									<img src="assets/images/multichoice.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-modal-btn" style="background-color: #DAA520"
+													onclick="document.getElementById('multichoice-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!------- End single speaker -->
+
+
+								<!-- Start single speaker ---->
+								<div class="mu-single-speakers">
+									<img src="assets/images/avm.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-modal-btn" style="background-color: #DAA520"
+													onclick="document.getElementById('avm-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!-----	End single speaker -->
+
+								<!-- Start single speaker 
+									<div class="mu-single-speakers">
+										<img src="assets/images/axiz.png" alt="speaker img">
+										<div class="mu-single-speakers-info">
+											
+											<ul class="mu-single-speakers-social">
+											<li><a class="mu-send-msg-btn" onclick="document.getElementById('axiz-modal-wrapper').style.display='block'" ><small>Click to View Profile</small> </a></li>
+												 
+												 
+											</ul>
+										</div>
+									</div>
+							<!-	End single speaker -->
+
+								<!-- Start single speaker --->
+								<div class="mu-single-speakers">
+									<img src="assets/images/cran.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-modal-btn" style="background-color: #DAA520"
+													onclick="document.getElementById('cran-modal-wrapper').style.display='block'"><small>Click
+														to View
+														Profile</small> </a></li>
+
+										</ul>
+									</div>
+								</div>
+								<!------ End single speaker -->
+
+								<!-- Start single speaker --->
+								<div class="mu-single-speakers">
+									<img src="assets/images/standardbank.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li><a class="mu-modal-btn" style="background-color: #DAA520"
+													onclick="document.getElementById('standard-modal-wrapper').style.display='block'"><small>Click
+														to
+														View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!------	 End single speaker -->
+
+								<!-- Start single speaker-->
+								<div class="mu-single-speakers">
+									<!------ <img src="assets/images/gold.png" alt="speaker img">--->
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li><a class="mu-modal-btn"
+													style="background-color:  #C0C0C0; margin-top: 80px;"><span>Silver
+														Sponsors</span> </a></li>
+
+										</ul>
+									</div>
+								</div>
+								<!-----	 End single speaker -->
+
+								<!-- Start single speaker--->
+								<div class="mu-single-speakers">
+									<img src="assets/images/bcx.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li><a class="mu-modal-btn" style="background-color:  #C0C0C0"
+													onclick="document.getElementById('bcx-modal-wrapper').style.display='block'"><small>Click
+														to View
+														Profile</small> </a></li>
+
+										</ul>
+									</div>
+								</div>
+								<!------	End single speaker -->
+
+								
+								<!-- Start single speaker--->
+								<div class="mu-single-speakers">
+										<img src="assets/images/ictech.png" alt="speaker img">
+										<div class="mu-single-speakers-info">
+	
+											<ul class="mu-single-speakers-social">
+												<li><a class="mu-modal-btn" style="background-color:  #C0C0C0"
+														onclick="document.getElementById('ictech-modal-wrapper').style.display='block'"><small>Click
+															to View
+															Profile</small> </a></li>
+	
+											</ul>
+										</div>
+									</div>
+									<!------	End single speaker -->
+
+								<!-- Start single speaker ----->
+								<div class="mu-single-speakers">
+									<img src="assets/images/veya.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-modal-btn" style="background-color:#C0C0C0"
+													onclick="document.getElementById('veya-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!------	 End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/headway.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li><a class="mu-modal-btn" style="background-color:  #C0C0C0"
+													onclick="document.getElementById('headway-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/paratus.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-modal-btn" style="background-color:#C0C0C0"
+													onclick="document.getElementById('paratus-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/proef.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li> <a class="mu-modal-btn" style="background-color:#C0C0C0"
+													onclick="document.getElementById('proef-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/shinetech.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li><a class="mu-modal-btn" style="background-color:#C0C0C0"
+													onclick="document.getElementById('shine-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+
+								<!-- Start single speaker ----->
+								<div class="mu-single-speakers">
+									<img src="assets/images/jasco.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-modal-btn" style="background-color:#C0C0C0"
+													onclick="document.getElementById('jasco-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!------	 End single speaker -->
+
+								<!--	 End Speakers Content -->
+
+								<!-- Start single speaker-->
+								<div class="mu-single-speakers">
+									<!------ <img src="assets/images/gold.png" alt="speaker img">--->
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li><a class="mu-modal-btn"
+													style="background-color:#f1f1f1; margin-top: 80px;"><span>Diamond
+														Sponsors</span> </a></li>
+
+										</ul>
+									</div>
+								</div>
+								<!-----	 End single speaker -->
+
+
+								<!-- Start single speaker --->
+								<div class="mu-single-speakers">
+									<img src="assets/images/green.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-modal-btn" style="background-color: #f1f1f1"
+													onclick="document.getElementById('green-modal-wrapper').style.display='block'"><small>Click
+														to View
+														Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!------	 End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/powercom.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-modal-btn" style="background-color:  #f1f1f1;"
+													onclick="document.getElementById('powercom-modal-wrapper').style.display='block'"><small>Click
+														to View Profile</small> </a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+
+								<!-- Start single speaker -
+					<div class="mu-single-speakers">
+						<img src="assets/images/fnb.png" alt="speaker img">
+						<div class="mu-single-speakers-info">
+							
+							<ul class="mu-single-speakers-social">
+							
+							<li>	<a class="mu-send-msg-btn" onclick="document.getElementById('fnb-modal-wrapper').style.display='block'" ><small>Click to View Profile</small> </a></li>
+										
+								 
+							</ul>
+						</div>
+					</div>
+				<!	 End single speaker -->
+								<!-- Start single speaker -
+					<div class="mu-single-speakers">
+						<img src="assets/images/forcepoint.png" alt="speaker img">
+						<div class="mu-single-speakers-info">
+							
+							<ul class="mu-single-speakers-social">
+							<li>	<a class="mu-send-msg-btn" onclick="document.getElementById('forcepoint-modal-wrapper').style.display='block'" ><small>Click to View Profile</small> </a></li>
+										
+								 
+							</ul>
+						</div>
+					</div>
+				  <!	 End single speaker -->
+
+								<!-- Start single speaker
+					<div class="mu-single-speakers">
+						<img src="assets/images/lori.png" alt="speaker img">
+						<div class="mu-single-speakers-info">
+							
+							<ul class="mu-single-speakers-social">
+							
+							<li><a class="mu-send-msg-btn" onclick="document.getElementById('lori-modal-wrapper').style.display='block'" ><small>Click to View Profile</small> </a></li>
+										
+								 
+							</ul>
+						</div>
+					</div>
+				<--	 End single speaker -->
+
+								<!-- Start single speaker
+					<div class="mu-single-speakers">
+						<img src="assets/images/outeku.png" alt="speaker img">
+						<div class="mu-single-speakers-info">
+							
+							<ul class="mu-single-speakers-social">
+							
+								<a class="mu-send-msg-btn" onclick="document.getElementById('oteku-modal-wrapper').style.display='block'" ><small>Click to View Profile</small> </a>
+										
+								 
+							</ul>
+						</div>
+					</div>
+					 End single speaker -->
+
+								<!--	 End single speaker -->
+							</div>
+						</div>
+
+						<div class="mu-title-area">
+							<div class="mu-title">
+								<table style=" margin-left:20%;">
+									<tr>
+										<!--<td><button><a href="assets/docs/Sponsorship Package.pdf"><i
+														class="fa fa-download"></i> Sponsorship Package</a> </button>
+										</td>
+										<td><button><a href="assets/docs/Sponosrship pledge form.pdf" download><i
+														class="fa fa-download"></i> Sponsorship Pledge form</a></button>
+										-->
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Sponsors -->
+
+
+	<!-- Start Schedule -->
+	<section id="mu-schedule">
+		<div class="container">
+			<div class="row">
+				<div class="colo-md-12">
+					<div class="mu-schedule-area">
+						<div class="mu-title-area">
+							<h2 class="mu-title">Schedule Detail</h2>
+
+						</div>
+
+						<div class="mu-title-area">
+							<h4 class="mu-title">TBA</h4>
+
+
+					<!--		<div class="row" style=" margin-left: 30%;">
+								<div class="column">
+									<img src="assets/images/Speakers/PDP PROFILE.jpg" alt="mc" style="width:100%">
+									<p>Paul Da Prince <br> <a
+											onclick="document.getElementById('pdp-modal-wrapper').style.display='block'"><small>Profile</small>
+										</a>
+									</p>
+								</div>
+								<div class="column">
+									<img src="assets/images/Speakers/mc.jpg" alt="mc" style="width:100%">
+									<p>Dial a DeadlyDuo <br> <a
+											onclick="document.getElementById('dod-modal-wrapper').style.display='block'"><small>Profile</small>
+										</a>
+									</p>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="mu-title-area">
+							<h2 class="mu-title">Programme</h2>
+							<p>Below are the details of the activities planned for the 3 day summit.</p>
+						</div>
+
+					
+
+						<div class="mu-schedule-content-area">
+							  Nav tabs 
+							<ul class="nav nav-tabs mu-schedule-menu" role="tablist">
+								<li role="presentation" class="active"><a href="#first-day" aria-controls="first-day"
+										role="tab" data-toggle="tab"> Day 1 / 07 Oct</a></li>
+								<li role="presentation"><a href="#second-day" aria-controls="second-day" role="tab"
+										data-toggle="tab"> Day 2 / 08 Oct</a></li>
+								<li role="presentation"><a href="#third-day" aria-controls="third-day" role="tab"
+										data-toggle="tab"> Day 3 / 09 Oct</a></li>
+
+							</ul>
+								Tab panes 
+							<div class="tab-content mu-schedule-content">
+								<div role="tabpanel" class="tab-pane fade mu-event-timeline in active" id="first-day">
+									<ul>
+										<li>
+											<div class="mu-single-event">
+												<p class="mu-event-time">7:00 AM</p>
+												<h3>Arrival and registration of Delegates and invited Guests</h3>
+												<p><small>Venue: Foyer</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<p class="mu-event-time">8:15 AM</p>
+												<h3>All delegates and invited guests to be seated</h3>
+												<p><small>Venue: Plenary</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<p class="mu-event-time">8:30 AM</p>
+												<h3>Arrival of Dignitaries</h3>
+												<p><small>Venue: Plenary</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<img src="assets/images/speaker-1.jpg" alt=" event speaker">
+												<p class="mu-event-time">8:40 AM</p>
+												<h3>Arrival of Hon. Stanley M. Simataa, Minister of ICT</h3>
+												<p><small>Venue: Plenary</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<img src="assets/images/speaker-10.jpg" alt=" event speaker">
+												<p class="mu-event-time">8:45 AM</p>
+												<h3>Arrival of Keynote addresser</h3>
+												<p><small>Venue: Plenary</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<p class="mu-event-time">9:05 AM</p>
+												<h3>Singing of the National and AU Anthems</h3>
+												<p><small>Venue: Plenary</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<p class="mu-event-time">9:10 AM</p>
+												<h3>Performance by NUST Choir</h3>
+												<p><small>Venue: Plenary</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<p class="mu-event-time">9:20 AM</p>
+												<h3>Unveiling of the National ICT Summit Brand Ambassador</h3>
+												<p><small>Venue: Plenary</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<img src="assets/images/speaker-1.jpg" alt=" event speaker">
+												<p class="mu-event-time">9:30 AM</p>
+												<h3>Welcoming & Introduction of Keynote Speaker by Hon. Stanley M.
+													Simataa
+												</h3>
+												<p><small>Venue: Plenary</small></p>
+								    <small><a href="assets/presentations/6thICTSummit-VPspeech.pdf" download >Download the speech</a></small>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<img src="assets/images/speaker-10.jpg" alt=" event speaker">
+												<p class="mu-event-time">9:40 AM</p>
+												<h3>Keynote address</h3>
+												<p><small>Venue: Plenary</small></p>
+
+											</div>
+										</li>
+
+										<li>
+											<div class="mu-single-event">
+												<img src="assets/images/PS.jpg" alt=" event speaker">
+												<p class="mu-event-time">10:15 AM</p>
+												<h3>Vote of Thanks by Mr. Mbeuta Ua-Ndjarakana, Executive Director, MICT
+												</h3>
+												<p><small>Venue: Plenary</small></p>
+												----<small><a href="assets/docs/DeputyMinisterVote of Thanks.pdf" download >Download the speech</a></small>--
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<p class="mu-event-time">10:25 AM</p>
+												<h3>Singing of the AU and National Anthem</h3>
+												<p><small>Venue: Plenary</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<img src="assets/images/speaker-1.jpg" alt=" event speaker">
+												<p class="mu-event-time">10:40 AM</p>
+												<h3>Exhibition Hall Ribbon Cutting Ceremony by Hon. Stanley M. Simataa
+												</h3>
+												<p><small>Venue: Plenary</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<p class="mu-event-time">10:50 AM</p>
+												<h3>Touring of Exhibition Stalls</h3>
+												<p><small>Hall</small></p>
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<p class="mu-event-time">11:30 AM</p>
+												<h3>Departure of Keynotes</h3>
+												<p><small>Foyer</small></p>
+											</div>
+										</li>
+
+										<li>
+											<div class="mu-single-event">
+												<img src="assets/images/speaker-10.jpg" alt="event speaker">
+												<p class="mu-event-time">12:20 PM</p>
+												<h3><b>Topic: Making Digital Transformation Work for the People</b></h3>
+												<h3>Presentation: Guest Speaker: Dr. Stanley Shanapinda </h3>
+												<p><small>Plenary</small></p>
+										<small><a href="assets/presentations/StanleyShanapindaPresentation-NamibiaNationalICTSummit2019.pdf" download >Download presentation</a></small>
+								    
+												
+											</div>
+										</li>
+										<li>
+											<div class="mu-single-event">
+												<p class="mu-event-time">12:55 PM</p>
+												<h3>Lunch Break</h3>
+											</div>
+										</li>
+											<li>
+								    			<div class="mu-single-event">
+													<img src="assets/images/nbc.png" alt="event speaker">
+								    				<p class="mu-event-time">14:00 PM</p>
+													<h3><b>Topic: The Role of Broadcaster within the OTT environment; the case of NBC</b></h3>	
+													<h3>Presentation: Nico Mwiya: NBC</h3>		
+													<p><small>Venue: Plenary</small></p>
+									-----<small><a href="assets/docs/Green.pdf" download >Download the presentation</a></small>--
+								    			</div>
+											</li>
+											<li>
+								    			<div class="mu-single-event">
+														<img src="assets/images/avm.png" alt="event speaker">
+								    				<p class="mu-event-time">14:30 PM</p>
+													<h3>Breakaway: Klaus von Kries: AVM</h3>
+													<h3>Topic: Future now on Home Networks</h3>
+												<p><small>Venue: A</small></p>
+												 	<small><a href="assets/docs/MTN.pdf" download >Download the presentation</a></small>
+								    			</div>
+											</li>
+
+											<li>
+								    			<div class="mu-single-event">
+														<img src="assets/images/mtn.png" alt="event speaker">
+								    				<p class="mu-event-time">14:30 PM</p>
+													<h3>Keynote Speaker: Franko Venter: MTN</h3>
+			                                     <br>
+													<h3>Topic: SIM BOXING and its Impact on
+														Telecommunication and Govt tax
+														</h3>
+												<p><small>Venue: B</small></p>
+													<small><a href="assets/docs/MTN.pdf" download >Download the presentation</a></small>
+								    			</div>
+											</li>
+											<li>
+								    			<div class="mu-single-event">
+														<img src="assets/images/speaker-10.jpg" alt="event speaker">
+								    				<p class="mu-event-time">14:30 PM</p>
+													<h3>Breakaway: Adamu Teklu: Roads Authority</h3>
+			                                        <br>
+													<h3>Topic: Intelligent Transport System for Namibia
+														</h3>
+												<p><small>Venue: D</small></p>
+									<small><a href="assets/presentations/IntelligentTransportSystemforNamibiabyADAMU.pdf" download >Download presentation</a></small>
+								    			</div>
+											</li>
+											<li>
+								    			<div class="mu-single-event">
+													<img src="assets/images/multichoice.png" alt="event speaker">
+													<p class="mu-event-time">14:30 PM</p>
+													<h3>Breakaway: Roger Gertze: MultiChoice Namibia </h3>
+													<br>
+													<h3><b>Topic: Embracing Digital Transformation</b></h3>
+												
+													<p><small>Venue: C</small></p>
+											----<small><a href="assets/docs/AxizICTSummit2018.pdf" download >Download the presentation</a></small>--
+								    			</div>
+											</li>
+											<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time">15:00 PM</p>
+								    				<h3>Refreshment Break and visiting exhibition Stands</h3>
+								    			</div>
+											</li>
+											<li>
+								    			<div class="mu-single-event">
+													<img src="assets/images/tn-sponsor.png" alt="event speaker">
+													<p class="mu-event-time">15:15 PM</p>
+													<h3><b>Topic: The Automation of Everything Era; the roadmap towards the 4th industrial Revolution </b></h3>
+													<h3>Presentation: Nokia Bell Labs: TELECOM NAMIBIA </h3>
+													
+													<p><small>Venue: Plenary</small></p>
+										---<small><a href="assets/docs/NamibiaNationalStrategiesCommunicationHuaweiFinal.pdf" download >Download the presentation</a></small>--
+								    			</div>
+											</li>
+											<li>
+								    			<div class="mu-single-event">
+													<img src="assets/images/mtc.png" alt="event speaker">
+													<p class="mu-event-time">15:45 PM</p>
+													<h3><b>Topic: Digital Transformation initiative through PPC</b></h3>
+													<br><h3>Presentation: Melvin Angula: MTC </h3>
+													
+													<p><small>Venue: Plenary</small></p>
+										---			<small><a href="assets/docs/MTCProsAndConsoftheDigitalRevolution.pdf" download >Download the presentation</a></small>
+								    			</div>
+											</li>
+											<li>
+								    			<div class="mu-single-event">
+													<img src="assets/images/Speakers/rose.jpg" alt="event speaker">
+													<p class="mu-event-time">16:15 PM</p>
+													<h3><b>Topic: Smart City</b></h3>
+													<h3>Presentation: Rose Moyo: HUAWEI</h3>
+													<p><small>Venue: Plenary</small></p>
+								    			</div>
+											</li>
+											
+											
+											<li>
+								    			<div class="mu-single-event">
+													<img src="assets/images/Speakers/nerson.jpg" alt="event speaker">
+													<p class="mu-event-time">16:45 PM</p>
+													<h3><b>Topic: The importance of Data Management in the Digital age</b></h3>
+													<br><h3>Presentation: Mr Nerson Tjelos: BI-DYNAMICS</h3>							
+													<p><small>Venue: Plenary</small></p>
+												</div>
+											</li>
+											<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time">17:15 PM</p>
+													<h3>Hand in Questionnaire - Lucky Draws - fantastic prizes to be won </h3>
+													<p><small>Venue: Plenary</small></p>
+								    			</div>
+											</li>
+								    	</ul>
+								    </div>
+								    <div role="tabpanel" class="tab-pane fade mu-event-timeline" id="second-day">
+								    	<ul>
+											<li>
+												<div class="mu-single-event">
+													<p class="mu-event-time">8.00 AM</p>
+													<h3>Arrival and Registration of delegates and
+														invited Guests</h3>
+													<p><small>Venue: Foyer</small></p>
+													</div>
+													</li>
+											<li>
+								    			<div class="mu-single-event">
+													<img src="assets/images/cran.png" alt="event speaker">
+													<p class="mu-event-time">8.30 AM</p>
+													<h3><b>Topic:Importance of Digitization; Bridging
+														the Economic Gap</b></h3>
+								    				<h3>Presentation: </h3><p>Festus K. Mbandeka: CRAN</p>													
+													<p><small>Venue: Plenary</small></p>
+									<small><a href="assets/docs/CRAN1.pdf" download >Download the presentation</a></small>
+								    			
+
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+													<img src="assets/images/Speakers/Speaker (Kai).jpg" alt="event speaker">
+													<p class="mu-event-time">9:00 AM</p>
+													<p><b>Topic: Data Governance and Protection of
+														Personal Information in today’s Business
+														world</b></p><br>
+								    				<h3>Presentation: </h3><p>Kai Walter Kleingunther: Bi-Dynamics</p> 													
+													<p><small>Venue: Plenary</small></p>
+									<small><a href="assets/presentations/PresentationICTsummit.pdf" download >Download presentation</a></small>
+								    			</div>
+											</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/Speakers/ian.jpg" alt="event speaker">
+								    				<p class="mu-event-time">9.30 AM</p>												
+													<h3><b>Topic: The Digital Transformation Journey</b></h3>
+													<h3>Presentation: </h3><p>Ian Nel: Schoemans Group</p> 
+													<p><small>Venue: Plenary</small></p>
+											<small><a href="assets/presentations/ICTConferenceDT.pdf" download >Download presentation</a></small>
+										
+
+								    			</div>
+								    		</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/tn-sponsor.png" alt="event speaker">
+													<p class="mu-event-time">10.00 AM</p>
+													<h3><b>Topic: Intelligent Cloud for Namibia</b></h3><br>
+													<h3>Presentation: TN/ BCX Cloud Solution
+														Partnership</h3>												
+													<p><small>Venue: Plenary</small></p>
+											----		<small><a href="assets/docs/PowerComICTsummitpresentationAmupolo3.pdf" download >Download the presentation</a></small>
+								    			</div>
+											</li>
+											<li>
+													<div class="mu-single-event">
+												<img src="assets/images/speaker-9.jpg" alt="event speaker">
+												<p class="mu-event-time">10:30  AM</p>
+														<h3>Refreshment Break, Visiting of Exhibition</h3>
+														<p><small>Venue: Foyer</small></p>
+													</div>
+												</li>
+
+												<li>
+													<div class="mu-single-event">
+															<img src="assets/images/nbc.png" alt="event speaker">
+															<p class="mu-event-time">10:45  AM</p>
+															<h3>Break-away: NBC</h3><br>
+															<h3><b>Topic: Audience Research Report within
+																the Namibia Broadcasting Industry; an NBC
+																Perspective</b></h3>
+															<h3>Pesenter: Nico Mwiya</h3>
+															<p><small>Venue: A</small></p>
+											<small><a href="assets/docs/GreenAttendanceTracker.pdf" download >Download the presentation</a></small>
+								    			
+													</div>
+												</li>
+
+											<li>
+													<div class="mu-single-event">
+														<img src="assets/images/standardbank.png" alt="event speaker">
+														<p class="mu-event-time">10:45  AM</p>
+														<h3>Break-away: Standard Bank Namibia</h3><br>
+														<h3><b>Topic: The Role of Digitalization within the
+															Financial Services Sector</b></h3>
+															<h3>Pesenter:Sindano Nekundi</h3>
+														<p><small>Venue: B</small></p>
+														<small><a href="assets/docs/AXIZ Forcepoint.pdf" download >Download the presentation</a></small>
+								    	
+
+													</div>
+												</li>
+
+												<li>
+													<div class="mu-single-event">
+														<img src="assets/images/mtc.png" alt="event speaker">
+														<p class="mu-event-time">10:45 AM</p>
+														<h3>Break-away: MTC</h3><br>
+														<h3><b>Topic: Shedding light on MTC – NUST MoU</b></h3>
+														<h3>Presenter: Adolf Ndafenongo & Prof. Heike
+														Winschiers-Teophilus</h3>
+														<p><small>Venue: C</small></p>
+												-----		<small><a href="assets/docs/AVMMesh.pdf" download >Download the presentation</a></small>
+											    
+
+														</div>
+													</li>
+												
+												<li>
+														<div class="mu-single-event">
+															<img src="assets/images/cran.png" alt="event speaker">
+															<p class="mu-event-time">10:45  AM</p>
+															<h3>Break-away: CRAN</h3><br>
+															<h3>Topic: The Role of the Regulator in a
+																Converging ICT Environment</h3>
+																<h3>Presenter: Jochen Traut</h3>
+															<p><small>Venue: D</small></p>
+															</div>
+														</li>
+													
+														<li>
+																<div class="mu-single-event">
+																	<img src="assets/images/mtc.png" alt="event speaker">
+																	<p class="mu-event-time">10:45 AM</p>
+																	<h3><b>Topic: Icloud</b></h3>
+																	<h3>Presentation: MTC</h3>																
+																	<p><small>Venue: Plenary</small></p>
+																	<small><a href="assets/docs/MTCiCloud.pdf" download >Download the presentation</a></small>
+																	</div>
+															</li>	
+														<li>
+																<div class="mu-single-event">
+																	<img src="assets/images/huawei.png" alt="event speaker">
+																	<p class="mu-event-time">11:15 AM</p>
+																	<h3><b>Topic: National Broadband Network for Namibia</b></h3>
+																	<h3>Presentation: Huawei</h3>												
+																	<p><small>Venue: Plenary</small></p>
+																	</div>
+																</li>	
+											<li>
+												<div class="mu-single-event">
+														<p class="mu-event-time">11:15 AM</p>
+														<h3>Panel Discussion: Smart Cities </h3>
+															
+														<p><b>Panel Members:</b></p>
+															<p>Dr. Stanley Shanapinda</p>
+															<p>Melvin Angula (MTC)</p>
+															<p>Rose Moyo (Huawei)</p>
+															<p>Clarence Rupingena (CoW)</p>
+															
+														<p><b>Moderator: Fillemon Johannes (MICT)</b></p>
+														<p><small>Venue: Plenary</small></p>
+												</div>
+											</li>		
+											
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<img src="assets/images/nepc.png" alt="event speaker">
+								    				<p class="mu-event-time">12.00 PM</p>
+													<h3>Presentation: NEPC</h3>
+													<h3>Topic: Digitalization Adopt or Die</h3>
+													<h3>Presenter: Benjamin N. Jakobs</h3>
+													<p><small>Venue: Plenary</small></p>
+													
+													
+												</div>
+												<li>
+													<div class="mu-single-event">
+														<img src="assets/images/speaker-10.jpg" alt="event speaker">
+														<p class="mu-event-time">12.30 PM</p>
+														<h3>Presentation: Ministry of Finance</h3><br>
+														<h3>Topic: Implementation of the Integrated Tax
+															Administration System (ITAS): Challenges and
+															Achievements</h3>
+														<h3>Presenter: Tonateni Shidhudhu</h3>
+														<p><small>Venue: Plenary</small></p>
+														<small><a href="assets/presentations/ITASPRESENTATION.pdf" download >Download presentation</a></small>
+												
+														
+														
+													</div>
+												</li>
+												<li>
+													<div class="mu-single-event">
+														<p class="mu-event-time">13.00 PM</p>
+														<h3>Lunch Break</h3>
+														
+													</div>
+												</li>
+								    		</li>
+								    		
+											<li>
+												<div class="mu-single-event">
+													<img src="assets/images/tn-sponsor.png" alt="event speaker">
+													<p class="mu-event-time">14:00 PM</p>
+													<h3>Break-away: Telecom Namibia</h3>
+													<br>
+													<h3><b>Topic:Improvement of Customer Experience
+														through Automated OSS/BSS Environment</b></h3>
+											<small><a href="assets/presentations/ICTSummitPresentation-LettyNamwoonde.pdf" download >Download presentation</a></small>
+													</div>
+											</li>
+											<li>
+													<div class="mu-single-event">
+														<img src="assets/images/speaker-10.jpg" alt="event speaker">
+														<p class="mu-event-time">14:30 PM</p>
+														<h3>Break-away: Sifani Sifani</h3><br>
+														<h3><b>Topic: How will Big Data Analytics and
+															Machine Learning Impact the Namibian
+															Government</b></h3>
+														<p><small>Venue: B</small></p>
+													<small><a href="assets/presentations/BigdataPresentation.pdf" download >Download presentation</a></small>
+													
+
+														</div>
+												</li>
+
+												<li>
+													<div class="mu-single-event">
+														<p class="mu-event-time">15.00 PM</p>
+														<h3>Refreshment Break</h3>
+														<p><small>Venue: Foyer</small></p>
+													</div>
+													</li>
+													
+													<li>
+													<div class="mu-single-event">
+														<img src="assets/images/Speakers/rose.jpg" alt="event speaker">
+														<p class="mu-event-time">15.15 PM</p>
+														<h3><b>Topic: IP/IT Solutions</b></h3>
+														<h3>Presentation: Huawei</h3>
+														<h3>Presenter: Rose Moyo</h3>
+														<p><small>Venue: Plenary</small></p>
+															<small><a href="assets/docs/GreenDatacenter.pdf" download >Download the presentation</a></small>
+													</div>
+													</li>
+															<li>
+																	<div class="mu-single-event">
+																		<img src="assets/images/mtn.png" alt="event speaker">
+																		<p class="mu-event-time">15:45 PM</p>
+																		<h3><b>Topic: SIM BOXING and its Impact on
+																			Telecommunication and Govt tax</b></h3>
+																		<h3>Presentation: MTN</h3>	
+																		<h3>Presenter: Chisanga Kayiza</h3>																	
+																		<p><small>Venue: Plenary</small></p>
+																<small><a href="assets/presentations/SIMBoxing-ChisangaKaziya.pdf" download >Download presentation</a></small>
+												
+																	</div>
+																</li>
+																<li>
+																		<div class="mu-single-event">
+																			<img src="assets/images/speaker-10.jpg" alt="event speaker">
+																			<p class="mu-event-time">16:15 PM</p>
+																			<h3>Presentation: MICT- ISOC Namibia Chapter</h3>
+																			<h3><b>Topic: Mapping the Way Towards a National
+																				Digital Strategy</b></h3>
+																		<small><a href="assets/presentations/DigitalStrategyPresentation-NamibiaNationalICTSummit2019-2.pdf" download >Download presentation</a></small>
+					                                                        	
+																			<p><small>Venue: Plenary</small></p>
+																		</div>
+																	</li>
+																	<li>
+																			<div class="mu-single-event">
+																				<img src="assets/images/speaker-9.jpg" alt="event speaker">
+														               <p class="mu-event-time">16:45 PM</p>
+																				<h3>Hand in Questionnaire – Lucky Draws – unbelievable prizes to be won</h3>
+																				
+																				<p><small>Venue: Plenary</small></p>
+																			</div>
+																		</li>
+																	
+								    	</ul>
+								    </div>
+								    <div role="tabpanel" class="tab-pane fade mu-event-timeline" id="third-day">
+								    	<ul>
+											<li>
+												<div class="mu-single-event">
+													<p class="mu-event-time">7.00 AM</p>
+													<h3>Arrival and Registration of delegates</h3>
+													<p><small>Venue: Foyer</small></p>
+												</div>
+											</li>
+											<li>
+												<div class="mu-single-event">
+													
+													<p class="mu-event-time">8:00 AM</p>
+													<h3>Arrival of Dignitaries</h3>
+													
+												</div>
+											</li>
+											<li>
+												<div class="mu-single-event">
+													<img src="assets/images/speaker-2.jpg" alt=" event speaker">
+													<p class="mu-event-time">8:30 AM</p>
+													<h3>Keynote: Hon. Engel Nawatiseb, Deputy Minister of ICT</h3>
+										<small><a href="assets/presentations/DMRemarksonYouthDay6thNationalICTSummit09Oct19.pdf" download >Download presentation</a></small>
+					               		</div>
+											</li>
+											<li>
+													<div class="mu-single-event">
+															<img src="assets/images/speaker-10.jpg" alt=" event speaker">
+														<p class="mu-event-time">8:40 AM</p>
+														<h3>Motivational Speaker: Dr. Stanley Shanapinda</h3>
+														<br>
+														<h3><b>Topic: The Harm of Digital Technologies
+															to young people and their Identity
+															Deficit</b></h3>
+										<small><a href="assets/presentations/NamibinaICTSummitYouthDay-9October2019.pdf" download >Download presentation</a></small>
+					             
+													</div>
+												</li>
+												<li>
+														<div class="mu-single-event">
+															<p class="mu-event-time">9:00 AM</p>
+															<p>Panel Discussion</p>
+															<p><b>Topic 1:</b></p>
+															<p><b> The State of
+																Technopreneurship in Namibia</b></p>
+															<p> Facilitator: Marsela Nur Rita (NUST)</p>
+															<b>Panelists:</b>												
+															<p>Tim Wucher (DO-PTY)</p>
+															<p>	Aron Hamukwaya (GSEI)</p>
+															----x----
+															<p>Cynthia Rukira (OM)</p>
+															----x----
+															<p> NYC</p>
+															----x----
+															<p> Collin Hangula (ISNC)</p>
+															
+														
+														</div>
+													</li>
+													<li>
+														<div class="mu-single-event">
+																<p class="mu-event-time">10:00 AM</p>
+															<h3>Pitch Competition</h3>
+															<p> Facilitator: ICT Tech Hub</p>
+											<small><a href="assets/docs/MotivationalSpeakerAronHamukwaya.pdf" download >Download the presentation</a></small>
+									   
+														</div>
+													</li>	
+													<li>
+															<div class="mu-single-event">
+																<p class="mu-event-time">11:00 AM</p>
+																<p>Panel Discussion</p>
+																<h3><b>Topic 2:</b></h3>
+																<h3><b> Digital Transformation
+																	and Youth Participation in the Process</b></h3>									
+																<p>Facilitator: Dr. Paulus Sheetekela
+																	(IUM)</p>
+																<h3><b>Panelists:</b></h3>	
+															<p>Prof. Anicia Peters
+																(NUST)</p>
+															----x----
+															<p>Dr. Kauna Mufeti (UNAM)</p>
+															----x----
+
+															<p>(OPM)</p> 
+															----x----
+															<p>( CPB)</p> 
+															----x----
+															 <p>(MICT)</p>
+														
+													</div>
+													</li>
+													
+													<li>
+														<div class="mu-single-event">
+																<p class="mu-event-time">12:00 PM</p>
+															<h3>Tech Idols Competition</h3>
+															<p> Facilitator: ICT Tech Hub</p>
+											<small><a href="assets/docs/MotivationalSpeakerAronHamukwaya.pdf" download >Download the presentation</a></small>
+									   
+														</div>
+													</li>
+
+													<li>
+															<div class="mu-single-event">
+																<p class="mu-event-time">13.00 PM</p>
+																<h3>Lunch Break</h3>
+															</div>
+														</li>
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time">14.00 PM</p>
+													<p>Panel Discussion:</p>
+													<h3><b>Topic 3:</b></h3> 
+													<h3><b>The Eco-System
+														available for Entrepreneurs in
+														Technology</b></h3>
+													<p>Moderator: Silas Newaka (NBII,
+														NUST)</p>
+													<h3><b>Panelists: </b></h3>
+														<p>Collin Hangula (ISNC)</p>
+														----x----
+														<p>Vincent Nowaseb (NCRST)</p>
+														----x----
+														<p>Hiljia Eelu
+															(APLI),</p>
+														----x----
+														<p>(MoF)</p>
+														----x----
+														<p>(PWC)</p>
+														----x----
+														<p>(BIPA)</p>
+
+													
+								    			</div>
+											</li>
+											
+											<li>
+												<div class="mu-single-event">
+													<p class="mu-event-time">15.00 PM</p>
+													<h3>Foyer Refreshment Break</h3>
+													
+												</div>
+											</li>
+
+								    	
+								    		<li>
+								    			<div class="mu-single-event">
+								    				<p class="mu-event-time">15.15 PM</p>
+													<h3>Awards hand over</h3>
+													<p><small>Venue: Plenary</small></p>
+								    			</div>
+											</li>
+											<li>
+													<div class="mu-single-event">
+														<p class="mu-event-time">15.45 PM</p>
+														<h3>Closing Ceremony:</h3>
+														<p><small>Venue: Plenary</small></p>
+													</div>
+												</li>
+								    	</ul>
+								    </div>
+								    
+								</div>
+
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>-->
+	</section>
+	<!-- End Schedule -->
+	<!-- Start Speakers -->
+	<section id="mu-speakers">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mu-speakers-area">
+
+						<div class="mu-title-area">
+							<div class="mu-title">
+								<h2>Presenters</h2>
+
+							</div>
+							<p>
+								<strong>"TBA"</strong>.</p>
+						</div>
+
+						<!-----		Start Speakers Content 
+						<div class="mu-speakers-content">
+
+							<div class="mu-speakers-slider">
+
+								 Start single speaker 
+								<div class="mu-single-speakers">
+									<img src="assets/images/speaker-1.jpg" alt="speaker img">
+									<div class="mu-single-speakers-info">
+										<h3>Stanley M. Simataa</h3>
+										<p>Hon. Minister of ICT</p>
+										<ul class="mu-single-speakers-social">
+											<li><a
+													onclick="document.getElementById('stanley-modal-wrapper').style.display='block'"><small>Profile</small>
+												</a></li>
+
+										</ul>
+									</div>
+								</div>
+									End single speaker -->
+
+								
+
+
+								<!-- Start single speaker 
+										<div class="mu-single-speakers">
+									<img src="assets/images/Speakers/nerson.jpg" alt="speaker img">
+									<div class="mu-single-speakers-info">
+										<h3>Nerson Tjelos</h3>
+										<p>BI-Dynamics</p>
+										<ul class="mu-single-speakers-social">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											 
+											 
+										</ul>
+									</div>
+								</div>
+								 End single speaker -->
+
+
+								<!-- Start single speaker -->
+								<!--		<div class="mu-single-speakers">
+									<img src="assets/images/theo.jpg" alt="speaker img">
+									<div class="mu-single-speakers-info">
+										<h3>Theodore (Theo) Schoeman</h3>
+										<p>Schoemans Group</p>
+										<ul class="mu-single-speakers-social">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											 
+											 
+										</ul>
+									</div>
+								</div>
+								 End single speaker -->
+							</div>
+						</div>
+						<!-- 	 End Speakers Content -->
+
+						<div class="mu-title-area">
+							<div class="mu-title">
+								<h3>Presentations </h3>
+								<h6>ICT Summit 2019</h6>
+							</div>
+							<!--		<p>A strong line-up of industry leaders and game changers has been prepared for this years summit under the theme <strong>"Digital Transformation for an ICT Smart Namibia"</strong>.</p>--->
+						</div>
+
+						<!--		 Start Speakers Content -->
+						<div class="mu-speakers-content">
+
+							<div class="mu-speakers-slider-3">
+
+								<!--		Start single speaker
+								<div class="mu-single-speakers">
+									<img src="assets/images/mtc.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+											<li><a class="mu-send-msg-btn"
+													href="assets/docs/MTCProsAndConsoftheDigitalRevolution.pdf"
+													download>Download Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!-		End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/multichoice.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-send-msg-btn"
+													href="assets/presentations/EmbracingDigitalTransformation_RogerGertze.pdf"
+													download>Download Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+									<!-- Start single speaker -->
+									<div class="mu-single-speakers">
+										<img src="assets/images/nbc.png" alt="speaker img">
+										<div class="mu-single-speakers-info">
+	
+											<ul class="mu-single-speakers-social">
+	
+												<li><a class="mu-send-msg-btn"
+														href="assets/presentations/AudienceResearchPresentation_December2018.pdf"
+														download>Download Presentation</a></li>
+	
+	
+											</ul>
+										</div>
+									</div>
+									<!--	 End single speaker -->
+
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/avm.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-send-msg-btn" href="assets/presentations/AVMnFuturenowPresentation2019.pdf"
+													download>Download Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!--	End single speaker -->
+
+								<!-- Start single speaker
+								<div class="mu-single-speakers">
+									<img src="assets/images/axiz.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-send-msg-btn" href="assets/docs/AXIZ Forcepoint.pdf"
+													download>Download Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!	End single speaker -->
+
+
+								<!-- Start single speaker -
+								<div class="mu-single-speakers">
+									<img src="assets/images/bcx.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-send-msg-btn" href="assets/docs/BCXPeplinkNamibia.pdf"
+													download>Download Presentation</a></li>
+										</ul>
+									</div>
+								</div>
+								<!	End single speaker -->
+
+								<!-- Start single speaker ---->
+								<div class="mu-single-speakers">
+									<img src="assets/images/cran.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-send-msg-btn"
+													href="assets/presentations/CRANPresentationDigitalEconomy.pdf" download>Download
+													Presentation</a></li>
+
+										</ul>
+									</div>
+								</div>
+								<!----- End single speaker -->
+
+								<!-- Start single speaker -
+								<div class="mu-single-speakers">
+									<img src="assets/images/green.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-send-msg-btn" href="assets/docs/GreenAttendanceTracker.pdf"
+													download>Download Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!-	 End single speaker -->
+
+
+								<!-- Start single speaker -
+								<div class="mu-single-speakers">
+									<img src="assets/images/huawei.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-send-msg-btn"
+													href="assets/docs/HuaweiAcceleratingCollaborativePublicSafety2.pdf"
+													download>Download Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!-	 End single speaker -->
+
+
+								<!-- Start single speaker -
+								<div class="mu-single-speakers">
+									<img src="assets/images/standardbank.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-send-msg-btn"
+													href="assets/docs/StandardBankBlueFuelICT5.pdf" download>Download
+													Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!-	 End single speaker -->
+
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<img src="assets/images/mtn.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-send-msg-btn" href="assets/presentations/MTNICTSummit-securityasaService-Final.pptx" download>Download
+													Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+
+								<!-- Start single speaker ---->
+								<div class="mu-single-speakers">
+									<img src="assets/images/nbc.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-send-msg-btn" href="assets/presentations/TheRoleofBroadcasterwithintheOTTEnvironment_the caseofNBC.pdf" download>Download
+													Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!-----	 End single speaker -->
+
+								<!-- Start single speaker -
+								<div class="mu-single-speakers">
+									<img src="assets/images/powercom.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-send-msg-btn"
+													href="assets/docs/PowerComICTsummitpresentationAmupolo3.pdf"
+													download>Download Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!	 End single speaker -->
+
+								<!-- Start single speaker --->
+								<div class="mu-single-speakers">
+									<img src="assets/images/nepc.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-send-msg-btn" href="assets/presentations/DigitalizationAdoptorDie.pdf"
+													download>Download Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!------	 End single speaker -->
+
+								<!-- Start single speaker ---->
+								<div class="mu-single-speakers">
+									<img src="assets/images/tn-sponsor.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li><a class="mu-send-msg-btn" href="assets/presentations/ICTSummitCloudPresentationFinal.pdf"
+													download>Download Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!-------	 End single speaker -->
+
+								<!-- Start single speaker ------>
+								<div class="mu-single-speakers">
+									<img src="assets/images/BID.png" alt="speaker img">
+									<div class="mu-single-speakers-info">
+
+										<ul class="mu-single-speakers-social">
+
+											<li> <a class="mu-send-msg-btn"
+													href="assets/presentations/ImportanceOfDataManagement.Nerson 2.pdf"
+													download>Download Presentation</a></li>
+
+
+										</ul>
+									</div>
+								</div>
+								<!------	 End single speaker -->
+							</div>
+						</div>
+						<!--	 End Speakers Content -->
+
+
+					</div>
+					<div class="mu-title-area">
+						<h3 class="mu-title" style="background-color: #fefefe;">Press Release</h3>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="mu-about-right">
+								<table>
+									<tr>
+										<td><img src="assets/images/ICT Summit 2019 Press Ad.png" height="200"
+												width="160"></td>
+										<td><b style="color: #2E4D9C;">ICT Summit 2019 Press Ad</b></td>
+										<td><a class="mu-send-msg-btn" href="assets/docs/ICTSummit2019PressAd.pdf"
+												download>Download</a>
+										</td>
+
+									</tr>
+								</table>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="mu-about-right">
+								<table>
+									<tr>
+										<td><img src="assets/images/cfc.png" height="200" width="160"></td>
+										<td><b style="color: #2E4D9C;">Invitation: Industry Challenge for ICT Summit
+												2019</b></td>
+										<td><a class="mu-send-msg-btn" href="assets/docs/callchallenge.pdf"
+												download>Download</a>
+										</td>
+
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</section>
+	
+
+
+		 <!-- Start Video --->
+		<section id="mu-video">
+				<div class="mu-video-overlay">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mu-video-area">
+									<h2>Watch Live</h2>
+									<a class="mu-video-play-btn" href="#"><i class="fa fa-play" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!------ Start Video content -->
+			<div class="mu-video-content">
+					<div class="mu-video-iframe-area">
+						<a class="mu-video-close-btn" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+						<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fictsummitnam%2Fvideos%2F493072784873818%2F&show_text=0&width=560" width="560" width="560" width="854" height="480" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>		
+					</div>
+				</div>
+			<!-- End Video content -->
+	
+			</section>
+			<!----- End Video -->
+
+	<!-- Start Pricing  -->
+	<section id="mu-pricing">
+
+
+
+		<!--Start other recorded videos-->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mu-speakers-area">
+
+						<div class="mu-title-area">
+							<h2 class="mu-title">Videos</h2>
+							<p>Watch some videos of the previous sessions at the summit</p>
+						</div>
+
+						<!-- Start Speakers Content -->
+						<div class="mu-speakers-content">
+
+							<div class="mu-speakers-slider">
+
+								<!--Start single speaker -->
+								<div class="mu-single-speakers">
+									<iframe
+										src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fictsummitnam%2Fvideos%2F2198102543815710%2F&show_text=0&width=560"
+										width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+									<div class="mu-single-speakers-info">
+										<p>Day 1 - 7-Oct-2019</p>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<iframe
+										src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fictsummitnam%2Fvideos%2F375237103384648%2F&show_text=0&width=560"
+										width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
+									<div class="mu-single-speakers-info">
+										<p>Day 1 - 7-Oct-2019</p>
+									</div>
+								</div>
+								<!--	End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<iframe
+										src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fictsummitnam%2Fvideos%2F2198102543815710%2F&show_text=0&width=560"
+										width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+									<div class="mu-single-speakers-info">
+										<p>Day 1 - 7-Oct-2019</p>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<iframe
+										src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fictsummitnam%2Fvideos%2F515036779230098%2F&show_text=0&width=560"
+										width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+									<div class="mu-single-speakers-info">
+										<p>Day 1 - 7-Oct-2019</p>
+									</div>
+								</div>
+								<!-- End single speaker -->
+
+
+								<!-- Start single speaker -->
+								<div class="mu-single-speakers">
+									<iframe
+										src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fictsummitnam%2Fvideos%2F401500743856888%2F&show_text=0&width=560"
+										width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+									<div class="mu-single-speakers-info">
+										<p>Day 2 - 8-Oct-2019</p>
+									</div>
+								</div>
+								<!-- End single speaker -->
+							<div class="mu-single-speakers">
+									<iframe
+										src="	https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fictsummitnam%2Fvideos%2F690355064794259%2F&show_text=0&width=560"
+										width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+									<div class="mu-single-speakers-info">
+										<p>Day 2 - 8-Oct-2019</p>
+									</div>
+								</div>
+
+								<div class="mu-single-speakers">
+									<iframe
+										src="	https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fictsummitnam%2Fvideos%2F690355064794259%2F&show_text=0&width=560"
+										width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+									<div class="mu-single-speakers-info">
+										<p>Day 2 - 8-Oct-2019</p>
+									</div>
+								</div>
+								<div class="mu-single-speakers">
+									<iframe
+										src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fictsummitnam%2Fvideos%2F493072784873818%2F&show_text=0&width=560"
+										width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+									<div class="mu-single-speakers-info">
+										<p>Day 3 - 9-Oct-2019</p>
+									</div>
+								</div>
+
+								<div class="mu-single-speakers">
+									<iframe
+										src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fictsummitnam%2Fvideos%2F493072784873818%2F&show_text=0&width=560"
+										width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no"
+										frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+									<div class="mu-single-speakers-info">
+										<p>Day 3 - 9-Oct-2019</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Speakers Content -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--End Speakers -->
+
+
+	</section>
+	<!-- End Pricing -->
+
+	<!-- Start Register  -->
+	<section id="mu-register">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mu-title-area">
+						<h2 class="mu-title" style="color: #fff"> Photo Gallery</h2>
+						<p style="color: #fff">Below are some of the moments captured at the 5th National ICT Summit
+							hosted in October 2018</p>
+
+					</div>
+					<div class="mu-register-area">
+
+						<div>
+							<div class="gallery-container">
+
+
+
+
+								<div class="gallery">
+									<iframe src="assets/image-gallery/standard.html" width="130%" height="450"
+										scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"
+										marginheight="0" marginwidth="0" style="align-items: left"></iframe>
+
+								</div>
+
+
+
+							</div>
+						</div>
+						<!--	<div class="mu-register-content">-->
+
+						<!--	</div>-->
+
+						<!--
+							<div class="mu-title-area">
+								<h2 class="mu-title">Feedback Form</h2>
+								<p>We are delighted that you were able to attend the 5th National ICT Summit and your inputs are incredibly valuable and will enable us to improve our general organization, proceedings and future themes (topics). </p>
+								<p>	Kindly complete this questionnaire and importantly, you are not required to provide your personal details on the questionnaire.</p>
+							</div>
+
+							<div class="mu-register-content">
+								<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdC4BbrsVKUC6FygGH1HtAcUtlbt5Q_80xujuto76vqOL3AjA/viewform?embedded=true" width="100%" height="3537" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" style="align-items: left" >Loading...</iframe>
+									</div>
+-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--	End Register -->
+
+	<!-- Start FAQ -->
+	<!-- 	<section id="mu-faq">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-faq-area">
+
+							<div class="mu-title-area">
+								<h2 class="mu-title">FAQ</h2>
+								<p>Listed below are some of the frequently asked questions</p>
+							</div>
+
+							<div class="mu-faq-content">
+
+								<div class="panel-group" id="accordion">
+
+							        <div class="panel panel-default">
+							          <div class="panel-heading">
+							            <h4 class="panel-title">
+							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+							                <span class="fa fa-angle-down"></span> When does the summit begin and for how many days will it run?
+							              </a>
+							            </h4>
+							          </div>
+							          <div id="collapseOne" class="panel-collapse collapse in">
+							            <div class="panel-body">
+							              The Summit starts on Monday the 15th of October 2018, It will run for 3 days up to the 17th of October.
+							            </div>
+							          </div>
+							        </div>
+
+							        <div class="panel panel-default">
+							          <div class="panel-heading">
+							            <h4 class="panel-title">
+							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+							                <span class="fa fa-angle-up"></span> Where will the summit be held?
+							              </a>
+							            </h4>
+							          </div>
+							          <div id="collapseTwo" class="panel-collapse collapse">
+							            <div class="panel-body">
+							              The summit will be hosted at the Safari Hotel.
+							            </div>
+							          </div>
+							        </div>
+
+							        <div class="panel panel-default">
+							          <div class="panel-heading">
+							            <h4 class="panel-title">
+							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+							                <span class="fa fa-angle-up"></span> How much does it cost to attend? 
+							              </a>
+							            </h4>
+							          </div>
+							          <div id="collapseThree" class="panel-collapse collapse">
+							            <div class="panel-body">
+							              The summit is free to attend, interested delegates are encouraged to register for accreditation.
+							            </div>
+							          </div>
+							        </div>
+
+							        <div class="panel panel-default">
+							          <div class="panel-heading">
+							            <h4 class="panel-title">
+							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+							                <span class="fa fa-angle-up"></span> Who will be exhibiting at the Summit? 
+							              </a>
+							            </h4>
+							          </div>
+							          <div id="collapseFour" class="panel-collapse collapse">
+							            <div class="panel-body">
+							              All of the major ICT players in Namibia will be exhibiting at the summit, there it is a must attend for ICT enthusiasts and the public in general as they will see some of the best in ICT technology that Namibia has to offer.
+							            </div>
+							          </div>
+							        </div>
+
+							        <div class="panel panel-default">
+							          <div class="panel-heading">
+							            <h4 class="panel-title">
+							              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+							                <span class="fa fa-angle-up"></span> What can we expect at the event? 
+							              </a>
+							            </h4>
+							          </div>
+							          <div id="collapseFive" class="panel-collapse collapse">
+							            <div class="panel-body">
+							              The best in ICT that Namibia can offer.
+							            </div>
+							          </div>
+							        </div>
+
+
+							    </div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		 End FAQ -->
+
+	<!-- Start Sponsors 
+		<section id="mu-sponsors">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-sponsors-area">
+							
+							<div class="mu-title-area">
+								<h2 class="mu-title">Our Sponsors</h2>
+								<p>The ICT Summit greatly appreciates the contributions made by its sponsors who have chosen to take ownership and resonsibility for growing the ICT industry.</p>
+							</div>-->
+
+	<!--	 Start spnonsors brand logo -->
+	<!--	<div class="mu-sponsors-content">
+								<div class="row">
+								<span color="danger"><h3>Platinum Sponsors</h3></span>
+									<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/multichoice.png" alt="Brand Logo">
+										</div>
+									</div>
+
+									<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/mtn.png" alt="Brand Logo">
+										</div>
+									</div>
+
+									<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/schoemans.png" alt="Brand Logo">
+										</div>
+									</div>
+
+									<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/telecom.png" alt="Brand Logo">
+										</div>
+									</div>
+
+										<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/green.png" alt="Brand Logo">
+										</div>
+									</div>
+
+									<div class="col-md-2 col-sm-4 col-xs-4">
+											<div class="mu-sponsors-single">
+												<img src="assets/images/mtc.png" alt="Brand Logo">
+											</div>
+										</div>
+
+										<div class="col-md-2 col-sm-4 col-xs-4">
+												<div class="mu-sponsors-single">
+													<img src="assets/images/huawei.png" alt="Brand Logo">
+												</div>
+											</div>
+
+											<div class="col-md-2 col-sm-4 col-xs-4">
+													<div class="mu-sponsors-single">
+														<img src="assets/images/standardbank.png" alt="Brand Logo">
+													</div>
+												</div>
+
+												<div class="col-md-2 col-sm-4 col-xs-4">
+														<div class="mu-sponsors-single">
+															<img src="assets/images/axiz.png" alt="Brand Logo">
+														</div>
+													</div>
+													<div class="col-md-2 col-sm-4 col-xs-4">
+															<div class="mu-sponsors-single">
+																<img src="assets/images/forcepoint.png" alt="Brand Logo">
+															</div>
+														</div>
+									</div>
+									<div class="row"><div></div>
+									<h3>Gold Sponsors</h3>
+									<div class="col-md-2 col-sm-4 col-xs-4" >
+										<div class="mu-sponsors-single">
+											<img src="assets/images/avm.png" alt="Brand Logo">
+										</div>
+									</div>
+
+									<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/cran.png" alt="Brand Logo">
+										</div>
+									</div>
+
+									<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/syntex.png" alt="Brand Logo">
+										</div>
+									</div>
+									</div>
+									<div class="row">
+									<h3>Diamond Sponsors</h3>
+									<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/powercom.png" alt="Brand Logo">
+										</div>
+									</div>
+
+										<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/nepc.png" alt="Brand Logo">
+										</div>
+									</div>
+									</div>
+									<div class="row">
+									<h3>Silver Sponsors</h3>
+									<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/paratus.png" alt="Brand Logo">
+										</div>
+									</div>
+
+									<div class="col-md-2 col-sm-4 col-xs-4">
+										<div class="mu-sponsors-single">
+											<img src="assets/images/fnb.png" alt="Brand Logo">
+										</div>
+									</div>
+									<div class="col-md-2 col-sm-4 col-xs-4">
+											<div class="mu-sponsors-single">
+												<img src="assets/images/proef.png" alt="Brand Logo">
+											</div>
+										</div>
+
+										<div class="col-md-2 col-sm-4 col-xs-4">
+												<div class="mu-sponsors-single">
+													<img src="assets/images/headway.png" alt="Brand Logo">
+												</div>
+											</div>
+
+											<div class="col-md-2 col-sm-4 col-xs-4">
+													<div class="mu-sponsors-single">
+														<img src="assets/images/shinetech.png" alt="Brand Logo">
+													</div>
+												</div>
+
+												<div class="col-md-2 col-sm-4 col-xs-4">
+														<div class="mu-sponsors-single">
+															<img src="assets/images/bcx.png" alt="Brand Logo">
+														</div>
+													</div>
+</div>
+								</div>
+							</div>
+							 End spnonsors brand logo -->
+
+	<!--		</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		 End Sponsors -->
+
+
+	<!-- Start exhibitors -->
+	<section id="mu-exhibitors">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mu-exhibitors-area">
+
+						<div class="mu-title-area">
+							<h2 class="mu-title">Our exhibitors</h2>
+							<p>A strong line-up of industry leaders and game changers will be exhibiting at this years'
+								summit <strong>"Visit their stands to learn more about their offerings"</strong>.</p>
+						</div>
+
+						<!-- Start exhibitors Content -->
+						<div class="mu-exhibitors-content">
+
+							<div class="mu-exhibitors-slider">
+
+								<!--	Start single speaker -->
+								<div class="mu-single-exhibitors">
+									<img src="assets/images/lori.png" alt="speaker img">
+									<div class="mu-single-exhibitors-info">
+
+										<ul class="mu-single-exhibitors-social">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+
+
+											<li><a href="#"><i class="fa fa-globe"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+								<!-- Start single speaker -->
+								<div class="mu-single-exhibitors">
+									<img src="assets/images/ITCL-Logo.png" alt="speaker img" style="margin-left:10%;">
+									<div class="mu-single-exhibitors-info">
+
+										<ul class="mu-single-exhibitors-social">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+
+											<li><a href="#"><i class="fa fa-globe"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<!--	 End single speaker -->
+
+
+								<!-- Start single speaker -->
+								<!--		<div class="mu-single-exhibitors">
+										<img src="assets/images/nbc.png" alt="speaker img">
+										<div class="mu-single-exhibitors-info">
+											<ul class="mu-single-exhibitors-social">
+												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+												 
+												 <li><a href="#"><i class="fa fa-globe"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									 End single speaker -->
+
+
+								<!-- Start single speaker -->
+								<!--	<div class="mu-single-exhibitors">
+										<img src="assets/images/shitaka.png" alt="speaker img">
+										<div class="mu-single-exhibitors-info">
+											
+											<ul class="mu-single-exhibitors-social">
+												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+												 
+												 <li><a href="#"><i class="fa fa-globe"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									 End single speaker -->
+
+								<!-- Start single speaker -->
+								<!--		<div class="mu-single-exhibitors">
+										<img src="assets/images/mtn.png" alt="speaker img">
+										<div class="mu-single-exhibitors-info">
+
+											<ul class="mu-single-exhibitors-social">
+												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+												 
+												 <li><a href="#"><i class="fa fa-globe"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									 End single speaker -->
+
+								<!-- Start single speaker -->
+								<!--		<div class="mu-single-exhibitors">
+										<img src="assets/images/telecom.png" alt="speaker img">
+										<div class="mu-single-exhibitors-info">
+											<ul class="mu-single-exhibitors-social">
+												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+												 
+												 <li><a href="#"><i class="fa fa-globe"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									 End single speaker -->
+
+
+								<!-- Start single speaker -->
+								<!--		<div class="mu-single-exhibitors">
+										<img src="assets/images/outeku.png" alt="speaker img">
+										<div class="mu-single-exhibitors-info">
+											<ul class="mu-single-exhibitors-social">
+												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+												 
+												 <li><a href="#"><i class="fa fa-globe"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									End single speaker -->
+
+
+								<!-- Start single speaker -->
+								<!-- 	<div class="mu-single-exhibitors">
+										<img src="assets/images/BID.png" alt="speaker img">
+										<div class="mu-single-exhibitors-info">
+											<ul class="mu-single-exhibitors-social">
+												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+												 
+												 
+												<li><a href="http://www.bi-dynamics.com/"><i class="fa fa-globe"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									 End single speaker -->
+
+								<!-- Start single speaker -->
+								<!--	<div class="mu-single-exhibitors">
+										<img src="assets/images/schoemans.png" alt="speaker img">
+										<div class="mu-single-exhibitors-info">
+											<ul class="mu-single-exhibitors-social">
+												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+												 
+												 <li><a href="#"><i class="fa fa-globe"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									 End single speaker -->
+
+
+
+							</div>
+						</div>
+						<!--	 End exhibitors Content -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--	 End exhibitors -->
+
+
+
+	<!-- Start Contact -->
+	<section id="mu-contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mu-contact-area">
+
+						<div class="mu-title-area">
+							<h2 class="mu-heading-title">Contact Us</h2>
+							<p>For any queries or contributions please do not hesitate to reach us:</p>
+						</div>
+
+						<h6 class="mu-title-area">Contact Person: Ms Paulina Magongo/ Ms Eva-Liisa Kafita<br><br>
+							Tel: +264 61 283 2375/ +264 61 283 2065<br><br>
+							Email: ictsummit@mict.gov.na </h6>
+						<!-- Start Contact Content
+							<div class="mu-contact-content">
+								<div class="row">
+
+								<div class="col-md-12">
+									<div class="mu-contact-form-area">
+										<div id="form-messages"></div>
+											<form id="" method="POST" action="contact.php" class="mu-contact-form">
+												<div class="form-group">                
+													<input type="input" class="form-control" placeholder="Name" id="name" name="name" required>
+												</div>
+												<div class="form-group">                
+													<input type="email" class="form-control" placeholder="Enter Email" id="email" name="email" required>
+												</div>              
+												<div class="form-group">
+													<textarea class="form-control" placeholder="Message" id="message" name="message" required></textarea>
+												</div>
+												<button type="submit" class="mu-send-msg-btn"><span>Send Message</span></button>
+								            </form>
+										</div>
+									</div>
+								</div>
+							<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSesfa_PXkQ4F_F1RmHUK37TJA6fkAxN4PHJsQPEg-e9mrsqCQ/viewform?embedded=true" width="640" height="790" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+							</div>
+							End Contact Content 
+						</div>-->
+					</div>
+				</div>
+			</div>
+	</section>
+	<!-- End Contact -->
+
+
+
+	<!--</main>
+	
+ End main content -->
+
+
+	<!-- Start footer -->
+	<footer id="mu-footer" role="contentinfo">
+		<div class="container">
+			<div class="mu-footer-area">
+				<div class="mu-footer-top">
+					<div class="mu-social-media">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-youtube"></i></a>
+					</div>
+				</div>
+				<div class="mu-footer-bottom">
+					<p class="mu-copy-right">&copy; Copyright 2019, Government of the Republic of Namibia, MICT,
+						<i>Powered by <a rel="nofollow" href="https://www.bi-dynamics.com/">BI Dynamics Pty Ltd.</a></i>
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<!-- End footer -->
+
+
+	<!-- Include jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<!-- Initialize Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- Slick slider -->
+	<script type="text/javascript" src="assets/js/slick.min.js"></script>
+	<!-- Event Counter -->
+	<script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
+	<!-- Ajax contact form  -->
+	<script type="text/javascript" src="assets/js/app.js"></script>
+
+
+
+	<!-- Custom js -->
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+
+
+	<script>
+		function myFunction(imgs) {
+			var expandImg = document.getElementById("expandedImg");
+			var imgText = document.getElementById("imgtext");
+			expandImg.src = imgs.src;
+			imgText.innerHTML = imgs.alt;
+			expandImg.parentElement.style.display = "block";
+		}
+	</script>
+
+	<script>
+		// When the user clicks on div, open the popup
+		function myFunction() {
+			var popup = document.getElementById("myPopup");
+			popup.classList.toggle("show");
+		}
+	</script>
+
+	<!-- Firebase -->
+	<!-- Start of HubSpot Embed Code
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6170519.js"></script>
+< End of HubSpot Embed Code -->
+	<script src="assets/js/onUpdate.f.js"></script>
+	<script src="assets/js/index.js"></script>
+	<script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+	<script defer src="/__/firebase/6.2.4/firebase-auth.js"></script>
+	<script defer src="/__/firebase/6.2.4/firebase-database.js"></script>
+	<!-- initialize the SDK after all desired features are loaded -->
+	<script defer src="/__/firebase/init.js"></script>
+	<script src="assets/js/main.js"></script>
+	<!-----<script src="assets/js/contact.js"></script>--->
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Events Registration</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+  <!-----  <h1 class="brand"><span>MICT</span> Welcomes You</h1>-->
+    <div class="wrapper">
+      <div class="company-info">
+        <h3 style="color: white;">Events Registration Form</h3>
+        <ul>
+      <!-----    <li><i class="fa fa-at"></i><small></small></li>------>
+         
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Register Now</h3>
+        <div class="alert_1">Email Already Registered</div>
+        <div class="alert">Successfully Registered</div>
+        <form id="contactForm">
+      
+          <p>
+            <label>First Name</label>
+            <input type="text" name="firstname" id="firstname" required>
+          </p>
+          <p>
+            <label>Last Name</label>
+            <input type="text" name="lastname" id="lastname">
+          </p>
+          <p>
+              <label>Username</label>
+              <input type="text" name="username" id="username">
+            </p>
+          <p>
+              <label>List of Events</label>
+              <select name="eventslist" id="eventslist" required style="width: 100%; height: 40%; padding:1em;
+              border:1px solid blue;">
+                <option value="Select">Select</option>
+                <option value="26/06/19-Minister's Breakfast">26/06/19 Minister's Breakfast</option>
+                <option value="TBA Sponsor's Handover">TBA Sponsor's Handover</option>
+                <option value="TBA ICT Summit">TBA ICT Summit</option>
+              </select>
+            </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email" id="email" required>
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone" id="phone">
+          </p>
+          <p class="full">
+            <label>Comment</label>
+            <textarea name="comment" rows="5" id="comment"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit" onclick="checkEmailExists()">Register</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
