@@ -1075,6 +1075,16 @@ align-items: center;
 	transition: all 0.5s;
 }
 
+  .mu-exhibitors-slider img,
+  .mu-exhibitors-content img,
+  .mu-single-exhibitors img {
+	
+	max-width: 500px;
+	max-height: 500px;
+	display: inline-block;
+	margin: 0 auto;
+  }
+
 /*--------------------*/
 /* VENUE */
 /*--------------------*/
