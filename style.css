@@ -467,6 +467,13 @@ align-items: center;
 	align-items: center;
 }
 
+.youth-img img{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
 .mu-menu-btn {
 	position: fixed;
 	right: 15%;
@@ -1009,7 +1016,7 @@ align-items: center;
 	background-image: url("assets/images/ictbackground2.gif");
 	background-color: #fff;
 	display: inline;
-	float: left;
+	float: left; 
 	width: 100%;
 }
 
@@ -1027,7 +1034,7 @@ align-items: center;
 	width: 100%;
 }
 
-.mu-single-exhibitoes {
+.mu-single-exhibitors {
 	padding: 0 10px;
 	outline: none;
 	text-align: center;
@@ -1073,6 +1080,7 @@ align-items: center;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
+	
 }
 
   .mu-exhibitors-slider img,
@@ -1081,8 +1089,19 @@ align-items: center;
 	
 	max-width: 500px;
 	max-height: 500px;
-	display: inline-block;
-	margin: 0 auto;
+	/* display: inline-block; */
+	/* margin: 0 auto; */
+  }
+
+  .mu-exhibitors-slider{
+	display: inline;
+	float: left;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding: 0 120px;
+	width: 100%;
+
   }
 
 /*--------------------*/
