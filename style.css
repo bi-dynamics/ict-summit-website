@@ -493,7 +493,26 @@ align-items: center;
 	border: 2px solid #fff;
 }
 
+#mu-registration {
+	background-image: url("assets/images/ictbackground2.gif");
+	background-color: #fff;
+	display: inline;
+	float: left;
+	width: 100%;
+	text-align: center;
+	justify-content: center; 
+	align-items: center;
+}
 
+.mu-registration {
+	display: inline;
+	float: left;
+	padding: 0px 0;
+	width: 100%;
+	text-align: center;
+	justify-content: center; 
+	align-items: center;
+}
 
 /*=== Featured section ===*/
 
@@ -2244,4 +2263,41 @@ align-items: center;
 }
 	
 }
+
+
+/* Registration on home page */
+/* Container needed to position the button. Adjust the width as needed */
+/* .reg-container{
+	position: static;
+	width: 50%;
+  } */
+  
+  /* Make the image responsive */
+  /* .reg-container img {
+	width: 100%;
+	height: auto;
+  } */
+  
+  /* Style the button and place it in the middle of the container/image */
+  .reg-container .btn {
+	position: absolute;
+	top: 105%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color: white;
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	font-weight: 500;
+	padding: 12px 24px;
+	width: 200px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+  }
+/*   
+  .reg-container .btn:hover {
+	background-color: rgb(9, 4, 35);
+	color: white;
+  } */
 
