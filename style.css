@@ -1054,9 +1054,11 @@ align-items: center;
 }
 
 .mu-single-exhibitors {
+	display: inline-block; /* Set to inline-block */
+    width: auto;
 	padding: 0 10px;
 	outline: none;
-	text-align: center;
+	text-align: left;
 	-webkit-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 }
@@ -1114,12 +1116,12 @@ align-items: center;
 
   .mu-exhibitors-slider{
 	display: inline;
-	float: left;
-	text-align: center;
-	justify-content: center;
-	align-items: center;
+	/* float: left; */
+	text-align: left;
+	justify-content: left;
+	align-items: left;
 	padding: 0 120px;
-	width: 100%;
+	/* width: 100%; */
 
   }
 
